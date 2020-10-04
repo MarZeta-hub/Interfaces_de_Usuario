@@ -13,13 +13,20 @@ header{
 
 /* Pie de la página*/
 footer{
+    display:flex;
     margin-left: 50px;
     margin-right: 50px;
-    border: 1px solid #000000;
-    border: 1px solid #000000;
     font-size:10px;
 
 }   
+
+.partepie{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 14px;
+}
 
 /* Containter incluye las tres partes centrales de la página que son nav, section y aside */
 .container{
