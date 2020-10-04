@@ -21,15 +21,6 @@ footer{
 
 }   
 
-/* foot incluye el formato con bordes y barras verticales de separacion pedidas para el footer */
-.foot {
-    margin-left: 50px;
-    width:100px;
-    margin-right: 5px;
-    border-right: 1px solid black;
-}
-
-
 /* Containter incluye las tres partes centrales de la página que son nav, section y aside */
 .container{
     display: flex;
