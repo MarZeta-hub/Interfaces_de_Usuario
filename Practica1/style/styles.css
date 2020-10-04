@@ -51,6 +51,7 @@ section{
     margin-right:10px;
     border: 1px solid #000000;
     width: 50%;
+    padding: 10px;
 }
 
 /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
@@ -58,3 +59,52 @@ aside{
     border: 1px solid #000000;
     width: 25%;
 }
+
+/* Contenedor de la lista de estudiantes parte central*/
+.contenerdorEstudiantes{
+    margin-left:10px;
+    margin-right:10px;
+    border: 1px solid #000000;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Cuando la tabla no quepa en el contenedor */
+@media screen and (max-width:1620px){
+    table {
+        /*Para que la tabla no se salga de la
+        columna central*/
+        display: block;
+        overflow-x: auto;
+        /* Tipo de borde */
+        border-collapse: collapse;
+        /* Fuente */
+        font-family: arial, sans-serif;
+    }
+}
+
+/* Tabla de estudiantes */
+table {
+    /* Tipo de borde */
+    border-collapse: collapse;
+    /* Fuente */
+    font-family: arial, sans-serif;
+    /* Posición de la tabla dentro de la columna central*/
+    float: center;
+    margin: auto;
+}
+
+/* Columnas y Filas de la tabla de estudiantes*/
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+/* Títulos de la parte Central */
+#studentsList{
+    text-align:center;
+}
+
+
