@@ -2,14 +2,32 @@
 /* Inicio del código CSS*/
 
 header{
+    height: 50px;
     margin-top:10px;
     margin-left: 50px;
     margin-right: 50px;
-    border:1px solid #000000;
-    padding-left: 1%;
-    padding-top: 0%;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 1px solid #000000;
 }
+
+.nombrePag{
+    height: 50px;
+    display: inline-flex;
+}
+
+.alturaNav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    float: right;
+}
+
+.navHeader{
+    display: flex;
+    border: 1px solid #000000;
+}
+
 
 /* Pie de la página*/
 footer{
@@ -17,7 +35,6 @@ footer{
     margin-left: 50px;
     margin-right: 50px;
     font-size:10px;
-
 }   
 
 .partepie{
@@ -105,4 +122,15 @@ td, th {
     text-align:center;
 }
 
+h1{
+    font-size: 20px;
+    padding: 0px;
+}
 
+h3{
+    font-size: 17px;
+    padding: 0 px;
+    padding-right: 20px;
+    padding-left:20px;
+    margin: 0;
+}
