@@ -6,8 +6,6 @@
 header{
     height: 50px;
     margin-top:10px;
-    margin-left: 50px;
-    margin-right: 50px;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid #000000;
@@ -20,27 +18,25 @@ header{
 }
 
 .container{
-    /* Containter incluye las tres partes centrales 
+    /* Container incluye las tres partes centrales 
      * de la página que son nav, section y aside 
     */
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 50px;
-    margin-left: 50px;
-   
+    overflow: hidden;
 }
 
 section{
     /* Centro de la página de Contenidos del curso*/
     border: 1px solid #000000;
     padding: 10px;
+    position: relative;
 }
 
 .contenerdorEstudiantes{
     /* Centro de la página de Lista de Estudiantes*/
     border: 1px solid #000000;
     padding: 10px;
+    position: relative;
 }
 
 /* Cuando la tabla no quepa en el contenedor */
@@ -50,8 +46,6 @@ section{
         columna central*/
         display: block;
         overflow-x: auto;
-        /* Tipo de borde */
-        border-collapse: collapse;
         /* Fuente */
         font-family: arial, sans-serif;
     }
@@ -99,8 +93,6 @@ h5{
 /* Pie de la página*/
 footer{
     display:flex;
-    margin-left: 50px;
-    margin-right: 50px;
     font-size:10px;
 }   
 
@@ -119,8 +111,13 @@ footer{
 
 
 /* ----- PARA PANTALLAS DE MÁS DE 769px (PC) -----*/
-@media only screen and (min-width: 769px){
+@media screen and (min-width: 769px){
     
+    header{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
     .alturaNav{
         display: flex;
         align-items: center;
@@ -133,6 +130,16 @@ footer{
         border: 1px solid #000000;
     }
     
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
     /* Parte izquierda de la página, donde está el navegador de la página */
     nav{ 
         border: 1px solid #000000;
@@ -170,6 +177,13 @@ footer{
     
     h5{ font-size:17px; }
     
+    footer{
+        display:flex;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size:10px;
+    }  
+
 
 }
 
@@ -180,10 +194,27 @@ footer{
 
 
 /* ----- PARA PANTALLAS MÁS PEQUEÑAS QUE 768px (TABLET) -----*/
-@media screen and (max-width:768px){
-   
+@media only screen and (max-width:768px){
+
+
+    header{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
     .alturaNav{ display: none; }
     
+
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
     /* Parte izquierda de la página, donde está el navegador de la página */
     nav{ 
         border: 1px solid #000000;
@@ -193,6 +224,7 @@ footer{
     section{ 
         margin-left:10px;
         width: 75%; }
+
 
     /* Contenedor de la lista de estudiantes parte central*/
     .contenerdorEstudiantes{ 
@@ -205,4 +237,54 @@ footer{
     h4{ font-size:15px; }
     
     h5{ font-size:12px; }
+
+    footer{
+        display:flex;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size:10px;
+    }  
+}
+
+
+@media only screen and  (max-width:600px){
+
+    header{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .alturaNav{ display: none; }
+
+    nav{display:none;}
+/* HAY QUE CAMBIAR LOS BORDES*/
+    
+    section{
+        margin: 0px;
+        width: 100%;
+    }
+
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .contenerdorEstudiantes {
+        margin: 0px;    
+        width: 100%;
+    }
+
+    aside{ display: none;}
+
+    footer{
+        display:flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size:10px;
+    }  
+
 }
