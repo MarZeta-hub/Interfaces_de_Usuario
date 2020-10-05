@@ -1,6 +1,8 @@
 
 /* Inicio del código CSS*/
 
+/* ----- Características Principales en todos los tamaños ----- */
+
 header{
     height: 50px;
     margin-top:10px;
@@ -12,75 +14,32 @@ header{
 }
 
 .nombrePag{
+    /* Nombre en el Header */
     height: 50px;
     display: inline-flex;
 }
 
-.alturaNav{
-    display: flex;
-    align-items: center;
-    height: 50px;
-    float: right;
-}
-
-.navHeader{
-    display: flex;
-    border: 1px solid #000000;
-}
-
-
-/* Pie de la página*/
-footer{
-    display:flex;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size:10px;
-}   
-
-.partepie{
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    border: 1px solid #000000;
-    font-size: 14px;
-}
-
-/* Containter incluye las tres partes centrales de la página que son nav, section y aside */
 .container{
+    /* Containter incluye las tres partes centrales 
+     * de la página que son nav, section y aside 
+    */
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 50px;
     margin-left: 50px;
+   
 }
 
-/* Parte izquierda de la página, donde está el navegador de la página */
-nav{
-    border: 1px solid #000000;
-    width: 25%;
-}
-
-/* Parte central de la página donde se encuentra todo el contenido */
 section{
-    margin-left:10px;
-    margin-right:10px;
+    /* Centro de la página de Contenidos del curso*/
     border: 1px solid #000000;
-    width: 50%;
     padding: 10px;
 }
 
-/* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
-aside{
-    border: 1px solid #000000;
-    width: 25%;
-}
-
-/* Contenedor de la lista de estudiantes parte central*/
 .contenerdorEstudiantes{
-    margin-left:10px;
-    margin-right:10px;
+    /* Centro de la página de Lista de Estudiantes*/
     border: 1px solid #000000;
-    width: 50%;
     padding: 10px;
 }
 
@@ -127,22 +86,123 @@ h1{
     padding: 0px;
 }
 
-h3{
-    font-size: 17px;
-    padding: 0 px;
-    padding-right: 20px;
-    padding-left:20px;
-    margin: 0;
-}
-
 h4{
-    font-size:20px;
     margin-top: 12px;
     margin-bottom: 20px;
     margin-left: 10px;
 }
 
 h5{
-    font-size:17px;
     margin:10px
+}
+
+/* Pie de la página*/
+footer{
+    display:flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size:10px;
+}   
+
+.partepie{
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 14px;
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS DE MÁS DE 769px (PC) -----*/
+@media only screen and (min-width: 769px){
+    
+    .alturaNav{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        float: right;
+    }
+
+    .navHeader{
+        display: flex;
+        border: 1px solid #000000;
+    }
+    
+    /* Parte izquierda de la página, donde está el navegador de la página */
+    nav{ 
+        border: 1px solid #000000;
+        width: 25%; }
+    
+    /* Parte central de la página donde se encuentra todo el contenido */
+    section{ 
+        margin-left: 10px;
+        width: 50%; 
+        margin-right:10px;
+    }
+
+    .contenerdorEstudiantes{
+        margin-left: 10px;
+        width: 50%; 
+        margin-right:10px;
+    }
+    
+    /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
+    aside{ 
+        border: 1px solid #000000;
+        width: 25%;
+    }
+
+    h3{
+        padding: 0 px;
+        margin: 0px;
+        font-size: 13px;
+        padding-right: 13px;
+        padding-left: 13px;
+            
+    }
+
+    h4{ font-size:20px; }
+    
+    h5{ font-size:17px; }
+    
+
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS MÁS PEQUEÑAS QUE 768px (TABLET) -----*/
+@media screen and (max-width:768px){
+   
+    .alturaNav{ display: none; }
+    
+    /* Parte izquierda de la página, donde está el navegador de la página */
+    nav{ 
+        border: 1px solid #000000;
+        width: 25%; }
+    
+    /* Parte central de la página donde se encuentra todo el contenido */
+    section{ 
+        margin-left:10px;
+        width: 75%; }
+
+    /* Contenedor de la lista de estudiantes parte central*/
+    .contenerdorEstudiantes{ 
+        margin-left:10px;
+        width: 75%; }
+    
+    /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
+    aside{ display: none !important; }
+    
+    h4{ font-size:15px; }
+    
+    h5{ font-size:12px; }
 }
