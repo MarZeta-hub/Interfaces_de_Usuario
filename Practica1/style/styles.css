@@ -13,6 +13,8 @@ header{
 
 .nombrePag{
     /* Nombre en el Header */
+    justify-content: center;
+    align-items: center;
     height: 50px;
     display: inline-flex;
 }
@@ -22,7 +24,6 @@ header{
      * de la página que son nav, section y aside 
     */
     display: flex;
-    overflow: hidden;
 }
 
 section{
@@ -57,8 +58,6 @@ table {
     border-collapse: collapse;
     /* Fuente */
     font-family: arial, sans-serif;
-    /* Posición de la tabla dentro de la columna central*/
-    float: center;
     margin: auto;
 }
 
@@ -104,6 +103,32 @@ footer{
     font-size: 14px;
 }
 
+.dropdown {
+    margin-right:5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 3px;
+    z-index: 1;
+    margin-left: -10px;
+    margin-top: 37px;
+  }
+  
+#yes:checked ~ .dropdown-content{
+    display:block;
+}
+  
+#yes{
+    display:none;
+}
 
 
 /*------------------------------------------------------------------*/
@@ -111,11 +136,15 @@ footer{
 
 
 /* ----- PARA PANTALLAS DE MÁS DE 769px (PC) -----*/
-@media screen and (min-width: 769px){
+@media (min-width: 769px){
     
     header{
         margin-left: 50px;
         margin-right: 50px;
+    }
+
+    .dropdown{
+        display:none;
     }
 
     .alturaNav{
@@ -165,7 +194,6 @@ footer{
     }
 
     h3{
-        padding: 0 px;
         margin: 0px;
         font-size: 13px;
         padding-right: 13px;
@@ -194,12 +222,16 @@ footer{
 
 
 /* ----- PARA PANTALLAS MÁS PEQUEÑAS QUE 768px (TABLET) -----*/
-@media only screen and (max-width:768px){
+@media (max-width:768px){
 
 
     header{
         margin-left: 30px;
         margin-right: 30px;
+    }
+
+    .dropdown{
+        display:none;
     }
 
     .alturaNav{ display: none; }
@@ -247,17 +279,20 @@ footer{
 }
 
 
-@media only screen and  (max-width:600px){
+@media (max-width:600px){
 
     header{
         margin-left: 10px;
         margin-right: 10px;
     }
 
+    .dropdown{
+        display:block;
+    }
+
     .alturaNav{ display: none; }
 
     nav{display:none;}
-/* HAY QUE CAMBIAR LOS BORDES*/
     
     section{
         margin: 0px;
@@ -268,13 +303,12 @@ footer{
         /* Container incluye las tres partes centrales 
          * de la página que son nav, section y aside 
         */
-        margin-top: 20px;
-        margin-bottom: 20px;
         margin-right: 10px;
         margin-left: 10px;
     }
     .contenerdorEstudiantes {
         margin: 0px;    
+        padding: 0px;
         width: 100%;
     }
 
