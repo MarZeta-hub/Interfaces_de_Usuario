@@ -26,6 +26,40 @@ header{
     display: flex;
 }
 
+.flexIntroduccionesVideos{
+    display:flex;
+    margin: 10px;
+    
+}
+
+.textoIntro{
+    margin-left:10px;
+    margin-bottom: 20px;
+}
+
+.titulotexto{
+    order:1;
+    width:50%;
+    margin-bottom:10px;
+    margin-left:10px;
+    margin-top:5px;
+}
+
+.videoCurso{
+    width: 50%;
+    order:0;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}
+
+article{
+    border: 1px solid #000000;
+}
+
+
 section{
     /* Centro de la página de Contenidos del curso*/
     border: 1px solid #000000;
@@ -77,6 +111,11 @@ td, th {
 h1{
     font-size: 20px;
     padding: 0px;
+}
+
+h2{
+    padding:0px;
+    margin:0px;
 }
 
 h4{
@@ -236,6 +275,28 @@ footer{
         display:none;
     }
 
+    .flexIntroduccionesVideos{
+        display:block;
+    }
+
+    .textoIntro{
+        margin:0px;
+    }
+    .titulotexto{
+        width:100%;
+        margin-left:0px;
+
+    }
+    
+    .videoCurso{
+        width: 100%;
+    }
+
+    .imagenTopic{
+        display:none;
+    }
+
+
     .alturaNav{ display: none; }
     
 
@@ -290,6 +351,19 @@ footer{
 
     .dropdown{
         display:block;
+    }
+
+    
+    .videoCurso{
+        border: 1px solid #b3ff00;
+    }
+
+    .titulotexto{
+        margin-left: 0px;
+    }
+
+    .texto{
+        display:none;
     }
 
     .alturaNav{ display: none; }
