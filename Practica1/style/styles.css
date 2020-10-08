@@ -4,27 +4,30 @@
 /* ----- Características Principales en todos los tamaños ----- */
 
 body{
+    /* Para todos los contenedores*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 header{
-    height: 50px;
-    margin-top:10px;
-    padding-left: 10px;
+    /* Contenedor superior de la página */
+    height: 50px;/* Altura definida */
+    margin-top:10px; /* Margen superior para que no se pegue con el navegador */
+    padding-left: 10px; /* Para los contenidos de dentro del Header */
     padding-right: 10px;
     border: 1px solid #000000;
 }
 
 #logo{
-    margin-left:5px;
+    /* Dentro de "nombrepag". Es el logo de la página */
+    margin-left:5px; 
     margin-right: 10px;
 }
 
 .nombrePag{
-    /* Nombre en el Header */
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    display: inline-flex;
+    /* Nombre y logo de la página dentro del Header */
+    display: inline-flex; /*Colocación de los objetos dentro del contenedor*/
+    align-items: center; /*Alinear contenido en el centro */
+    height: 50px; /* Altura del contenedor*/
 }
 
 .container{
@@ -34,21 +37,28 @@ header{
     display: flex;
 }
 
+/* PARTE CENTRAL EN PÁGINA PRINCIPAL */
 #tituloSeccion{
+    display:none;
     margin:20px;
     text-align: center;
+
 }
 
-.flexIntroduccionesVideos{
+.flexVideos{
     display:flex;
     margin: 5px;
     margin-bottom: 20px;
-    
+}
+
+.flexIntros{
+        display:flex;
+    margin: 5px;
+    margin-bottom: 20px;
 }
 
 .textoIntro{
     margin-left:10px;
-    margin-bottom: 20px;
 }
 
 .titulotexto{
@@ -72,29 +82,34 @@ article{
     margin-bottom: 50px;
 }
 
+
+/* Resto de páginas */
+
 section{
     /* Centro de la página de Contenidos del curso*/
     border: 1px solid #000000;
     padding: 10px;
-    position: relative;
+    position: relative; /* Necesario para que en la versión móvil pueda superponer el nav*/
 }
 
 .contenerdorEstudiantes{
     /* Centro de la página de Lista de Estudiantes*/
     border: 1px solid #000000;
     padding: 10px;
-    position: relative;
+    position: relative; /* Necesario para que en la versión móvil pueda superponer el nav*/
 }
 
 /* Cuando la tabla no quepa en el contenedor */
 @media screen and (max-width:1620px){
+    /* El valor 1620px no es un valor cualquiera, es cuando la página
+     * se hace suficientemente pequeña que hace que se distorsione la tabla y
+     * todo el contenido de la página 
+     */
     table {
         /*Para que la tabla no se salga de la
         columna central*/
-        display: block;
-        overflow-x: auto;
-        /* Fuente */
-        font-family: arial, sans-serif;
+        display: block; /* Bloqueamos la tabla*/
+        overflow-x: auto; /* Permitimos la barra de desplazamiento en el eje x*/
     }
 }
 
@@ -102,27 +117,25 @@ section{
 table {
     /* Tipo de borde */
     border-collapse: collapse;
-    /* Fuente */
-    font-family: arial, sans-serif;
-    margin: auto;
+    margin: auto; /*centrada*/
 }
 
-/* Columnas y Filas de la tabla de estudiantes*/
+
 td, th {
+    /* Columnas y filas de las tablas*/
     border: 1px solid #dddddd;
-    text-align: center;
-    margin: 0 auto;
-    padding: 8px;
+    text-align: center; /* Centrar dentro de la tabla*/
+    margin: 0 auto; /* Sin margen entre celdas */
+    padding: 8px; /* Espacio dentro de las celdas*/
 }
 
 /* Títulos de la parte Central */
 #studentsList{
-    text-align:center;
+    text-align:center; /*Centrados en el eje x*/
 }
 
 .ultimosEventos{
     margin:10px;
-
 }
 
 .proximosEventos{
@@ -153,6 +166,8 @@ h5{
 #foro{
     padding-left:30px;
 }
+
+/* Listas */
 dt{
     margin-bottom: 10px;
     font-size: 30px;
@@ -166,11 +181,13 @@ dd{
 
 /* Pie de la página*/
 footer{
+    /* Contenedor completo del pie*/
     display:flex;
     font-size:10px;
 }   
 
 .partepie{
+    /* Cada bloque del pie */
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -178,6 +195,7 @@ footer{
     font-size: 14px;
 }
 
+/* Navegador móvil integrado en el Header */
 .dropdown {
     margin-right:5px;
     position: relative;
@@ -185,27 +203,34 @@ footer{
     cursor: pointer;
   }
   
+  /* Contenido del navegador móvil*/
    .dropdown-content {
     display: none;
-    position: absolute;
+    position: absolute; /* Por encima del menu central*/
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menu*/
     padding: 3px;
-    z-index: 1;
+    z-index: 1; /* Por encima del menú central. Tipicamente todos los contenedores tienen
+                 * z-index = 0, asi que si a este le pongo z-index=1 , entonces se superpone
+                 * al anterior */
     margin-left: -10px;
     margin-top: 37px;
   }
-  
+
+  /* Cuando haga check al checker se muestre el contido*/
 #yes:checked ~ .dropdown-content{
     display:block;
 }
-  
+
+/* Ocular el checker para utilizar el label elegido */
 #yes{
     display:none;
 }
 
-
+#labelMovil{
+    cursor: pointer;
+}
 /*------------------------------------------------------------------*/
 
 
@@ -218,6 +243,10 @@ footer{
         margin-right: 40px;
     }
 
+    #paginaActual{
+        display:none;
+    }
+    
     .dropdown{
         display:none;
     }
@@ -307,17 +336,31 @@ footer{
         margin-right: 30px;
     }
 
+ 
+    #paginaActual{
+        display:block;
+    }
+
+    #tituloPag{
+        display:none;
+    }
     .dropdown{
         display:none;
     }
 
-    .flexIntroduccionesVideos{
+    .flexIntros{
         display:block;
+    }
+
+    .flexVideos{
+        display:block;
+        margin-left:20px;
     }
 
     .textoIntro{
         margin:0px;
     }
+
     .titulotexto{
         width:100%;
         margin-left:0px;
@@ -385,23 +428,35 @@ footer{
         margin-right: 10px;
     }
 
+    #logo{
+        display:none;
+    }
+    
+    #paginaActual{
+        display:block;
+    }
+
+    #tituloPag{
+        display:none;
+    }
+
     .dropdown{
         display:block;
     }
 
 
-    .titulotexto{
-        margin-left: 0px;
-    }
+    .titulotexto{margin-left: 0px; }
 
-    .texto{
-        display:none;
-    }
+    .texto{display:none;}
 
     .alturaNav{ display: none; }
 
     nav{display:none;}
     
+    .flexVideos{
+        margin-left:0px;
+    }
+
     section{
         margin: 0px;
         width: 100%;
