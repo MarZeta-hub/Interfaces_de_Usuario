@@ -231,6 +231,35 @@ footer{
 #labelMovil{
     cursor: pointer;
 }
+
+#students {
+display: none;    
+
+}
+
+#foro{
+display: none;
+}
+
+
+#califications{
+display:none;
+
+}
+
+.navPointer{
+    cursor: pointer;
+}
+
+#navCurso{
+    display:none;
+}
+
+.email{
+    cursor: pointer;
+}
+
+
 /*------------------------------------------------------------------*/
 
 

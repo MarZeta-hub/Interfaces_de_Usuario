@@ -5,6 +5,7 @@
     <title>Página principal</title>
     <link rel="stylesheet" href="style/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js"></script>
 </head>
 
 <body>
@@ -46,18 +47,15 @@
 
     <div class="container">
         <nav>
-            <h4>Curso</h4>
-            <a href="studentsList.html">
-                <h5>Estudiantes</h5>
-            </a>
-            <a href="foro.html">
-                <h5>Foro</h5>
-            </a>
-            <a href="calificaciones.html">
-                <h5>Calificaciones</h5>
-            </a>
+            <h4 id="h4Curso">Curso</h4>
+                <h5 onclick="students()" class="navPointer" id="navStudent">Estudiantes</h5>
+                <h5 onclick="foros()" class="navPointer" id="navForo">Foro</h5>
+                <h5 onclick="califications()" class="navPointer" id="navCalification">Calificaciones</h5>
+                <h5 onclick="topics()" class="navPointer" id="navCurso">Curso</h5>
         </nav>
-        <section>
+
+        <section id="topics">
+
             <h2 id="tituloSeccion"> Curso 2020/2021</h2>
             <article>
                 <!-- Tema 1 -->
@@ -65,7 +63,8 @@
                 <!-- INTRODUCCION AL TEMA -->
 
                 <div class="flexIntros">
-                    <div class="imagenTopic"> <!-- Necesario para ocultar en tablet y móvil-->
+                    <div class="imagenTopic">
+                        <!-- Necesario para ocultar en tablet y móvil-->
                         <img src="images/logo/HCI.png" alt="Topic no Encontrado" width="120" height="120">
                     </div>
 
@@ -202,7 +201,7 @@
                 </div>
 
                 <!-- VIDEO 3 -->
-                
+
                 <div class="flexVideos">
                     <div class="titulotexto">
                         <h2>Video 3: Diferencias entre la construcción de las interacciones</h2>
@@ -298,15 +297,218 @@
             </article>
 
         </section>
+
+        <div class="contenerdorEstudiantes" id="students">
+            <h1 id="studentsList"> Listado de Estudiantes del Curso 2020/2021</h1>
+            <div class="centrar">
+                <table>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Email</th>
+                        <th>Correo</th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Misky</th>
+                        <th>Orosco Vallejo</th>
+                        <th>MiskyOroscoVallejo@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()" >
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Cándice</th>
+                        <th>Núñez Altamirano</th>
+                        <th>CandiceNunezAltamirano@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p2.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Hanna</th>
+                        <th>Alonso Soria</th>
+                        <th>HannaAlonsoSoria@superrito.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p4.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Balbina</th>
+                        <th>Rodríguez Valenzuela</th>
+                        <th>BalbinaRodriguezValenzuela@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p6.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Adhelmar</th>
+                        <th>Galván Tejada</th>
+                        <th>AdhelmarGalvanTejada@superrito.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Hannah</th>
+                        <th>Prieto Rolón</th>
+                        <th>HannahPrietoRolon@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p9.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Agnus</th>
+                        <th>Quesada Oquendo</th>
+                        <th>AgnusQuesadaOquendo@superrito.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p7.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Marta</th>
+                        <th>Olivo Rangel</th>
+                        <th>MartaOlivoRangel@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p8.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
+                        <th>Viridiana</th>
+                        <th>Saavedra Echevarría</th>
+                        <th>ViridianaSaavedraEchevarria@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40" onclick="email()">
+                        </th>
+                        <th>Próspero</th>
+                        <th>Roque Quintero</th>
+                        <th>ProsperoRoqueQuintero@gustr.com</th>
+                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46" height="33" onclick="email()">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <section id="foro">
+            <h2 id="studentsList"> Foro de Estudiantes del Curso 2020/2021</h2>
+            <dl>
+                <dt>Tema1: Introducción al HCI</dt>
+                <dd>Número de mensajes: 64</dd>
+                <dd>Último mensaje: 17/07/2020 19:42</dd>
+                <dt>Tema2: Las Interfaces de Usuarios</dt>
+                <dd>Número de mensajes: 63</dd>
+                <dd>Último mensaje: 21/07/2020 10:26</dd>
+                <dt>Tema3: Las Interfaces de Usuarios Web</dt>
+                <dd>Número de mensajes: 105</dd>
+                <dd>Último mensaje: 16/08/2020 21:54</dd>
+                <dt>Tema4: WIMP y GUI</dt>
+                <dd>Número de mensajes: 45</dd>
+                <dd>Último mensaje: Ayer 16:32</dd>
+                <dt>Tema5: Heurísticas y Patrones</dt>
+                <dd>Número de mensajes: 87</dd>
+                <dd>Último mensaje: Hoy 08:24</dd>
+            </dl>
+        </section>
+
+        <div class="contenerdorEstudiantes" id="califications">
+            <h1 id="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
+            <div class="centrar">
+                <table>
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Actividad 1</th>
+                        <th>Actividad 2</th>
+                        <th>Actividad 3</th>
+                    </tr>
+                    <tr>
+                        <th>Misky Orosco Vallejo</th>
+                        <th>0.0</th>
+                        <th>7.0</th>
+                        <th>1.0</th>
+                    </tr>
+                    <tr>
+                        <th>Cándice Núñez Altamirano</th>
+                        <th>1.9</th>
+                        <th>1.0</th>
+                        <th>4.1</th>
+                    </tr>
+                    <tr>
+                        <th>Hanna Alonso Soria</th>
+                        <th>7.6</th>
+                        <th>2.7</th>
+                        <th>2.8</th>
+                    </tr>
+                    <tr>
+                        <th>Balbina Rodríguez Valenzuela</th>
+                        <th>6.1</th>
+                        <th>6.9</th>
+                        <th>8.4</th>
+                    </tr>
+                    <tr>
+                        <th>Adhelmar Galván Tejada</th>
+                        <th>9.8</th>
+                        <th>4.6</th>
+                        <th>8.0</th>
+                    </tr>
+                    <tr>
+                        <th>Hannah Prieto Rolón</th>
+                        <th>8.7</th>
+                        <th>5.5</th>
+                        <th>8.0</th>
+                    </tr>
+                    <tr>
+                        <th>Agnus Quesada Oquendo</th>
+                        <th>7.5</th>
+                        <th>4.8</th>
+                        <th>1.4</th>
+                    </tr>
+                    <tr>
+                        <th>Marta Olivo Rangel</th>
+                        <th>0.6</th>
+                        <th>2.4</th>
+                        <th>0.1</th>
+                    </tr>
+                    <tr>
+                        <th>Viridiana Saavedra Echevarría</th>
+                        <th>1.5</th>
+                        <th>5.9</th>
+                        <th>0.3</th>
+                    </tr>
+                    <tr>
+                        <th>Próspero Roque Quintero</th>
+                        <th>3.8</th>
+                        <th>8.1</th>
+                        <th>5.8</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+
+
+
+
+
         <aside>
             <div class="ultimosEventos">
                 <dl>
                     <dt>
-                        Últimos eventos 
+                        Últimos eventos
                     </dt>
-                    <dd><a href="pagprincipal.html"><h5>03/10 -Nuevos videos subidos</h5></a></dd>
-                    <dd><a href="pagprincipal.html"><h5>03/10 -Nuevo tema añadido</h5></a></dd>
-                    <dd><a href="foro.html"><h5>07/10 -Nuevos mensajes en el foro</h5></a></dd>
+                    <dd><a href="pagprincipal.html">
+                            <h5>03/10 -Nuevos videos subidos</h5>
+                        </a></dd>
+                    <dd><a href="pagprincipal.html">
+                            <h5>03/10 -Nuevo tema añadido</h5>
+                        </a></dd>
+                    <dd><a href="foro.html">
+                            <h5>07/10 -Nuevos mensajes en el foro</h5>
+                        </a></dd>
                 </dl>
 
             </div>
