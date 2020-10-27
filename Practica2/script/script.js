@@ -52,3 +52,9 @@ function email(){
     console.log("hola");
     window.location.href = "mailto:";
 }
+
+
+function nuevoMensajeForo(){
+    var datos = document.getElementById("tema1Nuevo").value;
+    document.write(datos);
+}

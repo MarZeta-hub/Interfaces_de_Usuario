@@ -259,7 +259,84 @@ display:none;
     cursor: pointer;
 }
 
+#forosCheck:checked ~ #mtema1{
+    display:block;
+}
 
+#forosCheck{
+    display:none;
+}
+
+.tituloTema{
+    cursor: pointer;
+}
+
+
+.mensajeForo{
+    padding:0px;
+    margin-left:20px;
+    align-items: center;
+}
+
+.temaAbierto{
+   display:none;
+   margin-right: 20px;
+   margin-bottom: 30px;
+}
+
+.mensaje{
+    border: 1px solid #000000;
+    padding:10px;
+    margin-top: 2px;
+}
+
+.emisor{
+    border: 1px solid #000000;
+    align-items: center; 
+    display: flex;
+    margin-bottom: 0px;
+    padding:10px;
+    
+}
+.emisorNuevo{
+    border: 1px solid #000000;
+    align-items: center; 
+    display: flex;
+    margin-bottom: 0px;
+    padding:10px;
+    
+    }
+
+.nombreForo{
+    padding:auto;
+    margin:0px;
+    margin-left: 10px;
+}
+
+.fechaForo{
+    border:1px solid #000000;
+    margin:0px;
+    margin-left: 20px;
+    font-size:12px;
+}
+
+.nuevoMensajeForo{
+    margin-top: 20px;
+}
+
+.mensajeNuevo{
+    box-sizing:border-box;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+#tituloAdd{
+    margin:10px;
+    margin-top: 0px;
+    font-size: 20px;
+}
 /*------------------------------------------------------------------*/
 
 
