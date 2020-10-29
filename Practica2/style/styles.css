@@ -130,7 +130,8 @@ td, th {
 }
 
 /* Títulos de la parte Central */
-#studentsList{
+.studentsList{
+    margin-bottom: 20px;
     text-align:center; /*Centrados en el eje x*/
 }
 
@@ -232,87 +233,122 @@ footer{
     cursor: pointer;
 }
 
+/* Parte central cuando seleccionas ESTUDIANTES*/
 #students {
 display: none;    
 
 }
 
+/* Parte central cuando seleccionas FORO*/
 #foro{
 display: none;
 }
 
-
+/* Parte central cuando seleccionas CALIFICACIONES*/
 #califications{
 display:none;
 
 }
 
+/* CURSOR TIPO PUNTERO*/
 .navPointer{
     cursor: pointer;
 }
 
+/*Para ocultar en el navegador el curso
+Soolo es necesario ocultar curos debido a que los
+demás se ocultan mediante javascript*/
 #navCurso{
     display:none;
 }
 
+
+/* Para las imágenes de EMAIL en el cuadro de alumnos*/
 .email{
     cursor: pointer;
 }
 
+/*---Para mostrar el tema indicado de cada uno de los foros -----*/
 #forosCheck:checked ~ #mtema1{
     display:block;
 }
 
-#forosCheck{
+#forosCheck2:checked ~#mtema2{
+    display:block;
+}
+
+#forosCheck3:checked ~#mtema3{
+    display:block;
+}
+
+#forosCheck4:checked ~#mtema4{
+    display:block;
+}
+
+#forosCheck5:checked ~#mtema5{
+    display:block;
+}
+/*-----------------------------------------------------------------*/
+
+/* Ocultar el botón check de la parte de temas*/
+.checkOculto{
     display:none;
 }
 
+/* --------CARACTERÍSTICAS ÚNICAS DE LOS TÍTULOS DEL LOS FOROS -------*/
+/* Cambia todos los LABELS del foro*/
 .tituloTema{
+    font-size: 30px;
     cursor: pointer;
 }
 
-
-.mensajeForo{
-    padding:0px;
-    margin-left:20px;
-    align-items: center;
+/* En el caso de que desplaces el puntero por encima de los LABELS*/
+.tituloTema:hover {
+    font-weight: bold;
+    color: #000000;
+    cursor: pointer;
 }
 
+/* Características de los atributos que hay debajo del título del foro*/
+.bajoTitulo{
+    margin-left:0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+/*--------------------------------------------------------------*/
+
+
+/* El div completo de un foro*/
 .temaAbierto{
-   display:none;
-   margin-right: 20px;
-   margin-bottom: 30px;
-}
+    display:none;
+    margin-right: 20px;
+    margin-bottom: 30px;
+ }
 
+/* Mensaje completo del foro*/
 .mensaje{
     border: 1px solid #000000;
     padding:10px;
     margin-top: 2px;
 }
 
+/* Foto y nombre de un emisor de mensaje ya enviado*/
 .emisor{
     border: 1px solid #000000;
     align-items: center; 
     display: flex;
     margin-bottom: 0px;
-    padding:10px;
-    
+    padding:10px; 
 }
-.emisorNuevo{
-    border: 1px solid #000000;
-    align-items: center; 
-    display: flex;
-    margin-bottom: 0px;
-    padding:10px;
-    
-    }
 
+/* Nombre de una persona emisora en el foro*/
 .nombreForo{
     padding:auto;
     margin:0px;
     margin-left: 10px;
 }
 
+/* Fecha de cuando se ha enviado un mensaje en el foro*/
 .fechaForo{
     border:1px solid #000000;
     margin:0px;
@@ -320,10 +356,35 @@ display:none;
     font-size:12px;
 }
 
+/* Contenido de un mensaje del foro*/
+.mensajeForo{
+    padding:0px;
+    margin-left:20px;
+    align-items: center;
+}
+
+/* Contenido de todas los contenedores de la parte de añadir un mensaje*/
 .nuevoMensajeForo{
     margin-top: 20px;
 }
 
+/* El titulo del contenido para añadir un nuevo mensaje al foro*/
+.tituloAdd{
+    margin:10px;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+/* Foto y nombre del emisor nuevo que quiere añadir un mensaje*/
+.emisorNuevo{
+    border: 1px solid #000000;
+    align-items: center; 
+    display: flex;
+    margin-bottom: 0px;
+    padding:10px;
+}
+
+/*TextArea del mensaje nuevo*/
 .mensajeNuevo{
     box-sizing:border-box;
     width: 100%;
@@ -332,11 +393,6 @@ display:none;
     margin-bottom: 6px;
 }
 
-#tituloAdd{
-    margin:10px;
-    margin-top: 0px;
-    font-size: 20px;
-}
 /*------------------------------------------------------------------*/
 
 

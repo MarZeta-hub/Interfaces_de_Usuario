@@ -54,7 +54,19 @@ function email(){
 }
 
 
-function nuevoMensajeForo(){
-    var datos = document.getElementById("tema1Nuevo").value;
-    document.write(datos);
+function nuevoMensajeForo(mensajeNuevo, lugarMensaje, numeroMensaje, ultimoTiempo){
+    var datos = document.getElementById(mensajeNuevo).value;
+    if( datos.length <= 10){
+        alert("No se puede publicar un post con menos de 10 letras");
+        return;
+    }
+    var imagenActual= document.getElementById("imagenActual").outerHTML;
+    var personaActual = document.getElementById("personaActual").innerHTML;
+    var f = new Date();
+    var fechaActual = f.getDate() + "/" + f.getMonth() + "/" + f.getFullYear() +"  " + f.getHours() + ":" + f.getMinutes();
+    var nuevoTiempo = "Último mensaje: " + fechaActual; 
+    document.getElementById(ultimoTiempo).innerHTML = nuevoTiempo;
+    document.getElementById(numeroMensaje).innerHTML = parseInt(document.getElementById(numeroMensaje).innerHTML) + 1;
+    document.getElementById(lugarMensaje).outerHTML = '<div class="mensaje"><div class="emisor">' + imagenActual + '<h4 class="nombreForo">' + personaActual + '</h4><h6 class="fechaForo">' +fechaActual+ '</h6></div><p class="mensajeForo">'+ datos + '</p></div><div id="'+lugarMensaje+ '"></div>';
 }
+

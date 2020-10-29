@@ -299,7 +299,7 @@
         </section>
 
         <div class="contenerdorEstudiantes" id="students">
-            <h1 id="studentsList"> Listado de Estudiantes del Curso 2020/2021</h1>
+            <h1 class="studentsList"> Listado de Estudiantes del Curso 2020/2021</h1>
             <div class="centrar">
                 <table>
                     <tr>
@@ -405,82 +405,264 @@
         </div>
 
         <section id="foro">
-            <h2 id="studentsList"> Foro de Estudiantes del Curso 2020/2021</h2>
-            <dl>
-                <input type="checkbox" name="my-input" id="forosCheck">
-                <label for="forosCheck" class="tituloTema">
-                    <dt>Tema1: Introducción al HCI</dt>
-                </label>
-                <dd>Número de mensajes: 4</dd>
-                <dd>Último mensaje: 17/07/2020 19:42</dd>
-                <div class="temaAbierto" id="mtema1">
-                    <div class="mensaje">
-                        <div class="emisor">
-                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                            <h6 class="fechaForo">16/07/2020 14:30</h6>
-                        </div>
-                        <p class="mensajeForo">¿Alguien sabe donde están los apuntes de la asignatura?</p>
-                    </div>
-                    <div class="mensaje">
-                        <div class="emisor">
-                            <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
-                            <h4 class="nombreForo">Hannah Prieto Rolón </h4>
-                            <h6 class="fechaForo">16/07/2020 17:50</h6>
-                        </div>
-                        <p class="mensajeForo"> No lo sé Misky, la última clase dijo que pronto los subiría</p>
-                    </div>
-                    <div class="mensaje">
-                        <div class="emisor">
-                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                            <h6 class="fechaForo">16/07/2020 22:30</h6>
-                        </div>
-                        <p class="mensajeForo">Y...¿alguien conoce cuándo es el examen de esta parte?</p>
-                    </div>
-                    <div class="mensaje">
-                        <div class="emisor">
-                            <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
-                            <h4 class="nombreForo">Próspero Roque Quintero</h4>
-                            <h6 class="fechaForo">17/07/2020 19:42</h6>
-                        </div>
-                        <p class="mensajeForo">El examen dijo que será dentro de dos semanas y que cuando pueda subirá
-                            los apuntes.</p>
-                    </div>
-                    
-                    <div class="nuevoMensajeForo" >
-                        <h1 id="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h1>
-                        <div class="emisorNuevo">
-                            <img src="images/desconocido.png" alt="Perfil no Encontrado" width="46" height="40">
-                            <h4 class="nombreForo" id="personaActual"> Desconocido </h4>
-                        </div>
-                        <textarea id="tema1Nuevo" rows = "5" class="mensajeNuevo" name = "description"></textarea>
-                        <input type="submit" onclick="nuevoMensajeForo()">
+            <h2 class="studentsList"> Foro de Estudiantes del Curso 2020/2021</h2>
 
+            <!-- Foro 1 -->
+
+            <input type="checkbox" name="my-input" id="forosCheck" class="checkOculto">
+            <label for="forosCheck" class="tituloTema">Tema1: Introducción al HCI</label>
+            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje1">4</b></h4>
+            <h4 class="bajoTitulo" id="ultimoMensajeTiempo1">Último mensaje: 17/07/2020 19:42</h4>
+            <div class="temaAbierto" id="mtema1">
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                        <h6 class="fechaForo">16/07/2020 14:30</h6>
                     </div>
+                    <p class="mensajeForo">¿Alguien sabe donde están los apuntes de la asignatura?</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Hannah Prieto Rolón </h4>
+                        <h6 class="fechaForo">16/07/2020 17:50</h6>
+                    </div>
+                    <p class="mensajeForo"> No lo sé Misky, la última clase dijo que pronto los subiría</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">16/07/2020 22:30</h6>
+                    </div>
+                    <p class="mensajeForo">Y...¿alguien conoce cuándo es el examen de esta parte?</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                        <h6 class="fechaForo">17/07/2020 19:42</h6>
+                    </div>
+                    <p class="mensajeForo">El examen dijo que será dentro de dos semanas y que cuando pueda subirá
+                        los apuntes.</p>
+                </div>
+                <div id="mensaje1"></div>
+                <div class="nuevoMensajeForo">
+                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                    <div class="emisorNuevo">
+                        <img id="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                            height="40">
+                        <h4 class="nombreForo" id="personaActual"> Desconocido </h4>
+                    </div>
+                    <textarea id="tema1Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                    <input type="submit"
+                        onclick="nuevoMensajeForo('tema1Nuevo','mensaje1','numeroMensaje1','ultimoMensajeTiempo1')">
+                </div>
+            </div>
+
+            <!-- Foro 2 -->
+
+            <input type="checkbox" name="my-input" id="forosCheck2" class="checkOculto">
+            <label for="forosCheck2" class="tituloTema">Tema2: Las Interfaces de Usuarios</label>
+            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje2">6</b></h4>
+            <h4 class="bajoTitulo" id="ultimoMensajeTiempo2">Último mensaje: 18/07/2020 11:30</h4>
+            <div class="temaAbierto" id="mtema2">
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                        <h6 class="fechaForo">16/07/2020 14:30</h6>
+                    </div>
+                    <p class="mensajeForo">¿Os acordais de cuales eran los tipos de interfaces de ventana?</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Hannah Prieto Rolón </h4>
+                        <h6 class="fechaForo">16/07/2020 17:50</h6>
+                    </div>
+                    <p class="mensajeForo"> Salió en el test de la semana pasada, ¿No?</p>
+                </div>
+
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                        <h6 class="fechaForo">17/07/2020 11:30</h6>
+                    </div>
+                    <p class="mensajeForo">Si, pero no me acuerdo</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">17/07/2020 22:30</h6>
+                    </div>
+                    <p class="mensajeForo">Era algo como MDI, SDI y TDI</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                        <h6 class="fechaForo">18/07/2020 09:42</h6>
+                    </div>
+                    <p class="mensajeForo">¿Y los tipos de ventana?</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">18/07/2020 11:30</h6>
+                    </div>
+                    <p class="mensajeForo">Tilted windows, Overlapping windows y Cascading windows</p>
+                </div>
+                <div id="mensaje2"></div>
+                <div class="nuevoMensajeForo">
+                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                    <div class="emisorNuevo">
+                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                            height="40">
+                        <h4 class="nombreForo personaActual"> Desconocido </h4>
+                    </div>
+                    <textarea id="tema2Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                    <input type="submit"
+                        onclick="nuevoMensajeForo('tema2Nuevo','mensaje2','numeroMensaje2','ultimoMensajeTiempo2')">
+                </div>
+            </div>
+
+            <!-- Foro 3 -->
+
+
+            <input type="checkbox" name="my-input" id="forosCheck3" class="checkOculto">
+            <label for="forosCheck3" class="tituloTema">Tema3: Las Interfaces de Usuarios Web</label>
+            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje3">3</b></h4>
+            <h4 class="bajoTitulo" id="ultimoMensajeTiempo3">Último mensaje: 22/07/2020 11:30</h4>
+            <div class="temaAbierto" id="mtema3">
+
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">22/07/2020  10:30</h6>
+                    </div>
+                    <p class="mensajeForo">¿Los ejercicios de esta parte cuándo se entregan?</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                        <h6 class="fechaForo">22/07/2020  10:42</h6>
+                    </div>
+                    <p class="mensajeForo">El 1 de octubre antes de las 11 de la noche</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">22/07/2020 11:30</h6>
+                    </div>
+                    <p class="mensajeForo">¡Gracias!</p>
                 </div>
 
 
 
+                <div id="mensaje3"></div>
+                <div class="nuevoMensajeForo">
+                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                    <div class="emisorNuevo">
+                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                            height="40">
+                        <h4 class="nombreForo personaActual"> Desconocido </h4>
+                    </div>
+                    <textarea id="tema3Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                    <input type="submit"
+                        onclick="nuevoMensajeForo('tema3Nuevo','mensaje3','numeroMensaje3','ultimoMensajeTiempo3')">
+                </div>
+            </div>
 
-                <dt>Tema2: Las Interfaces de Usuarios</dt>
-                <dd>Número de mensajes: 7</dd>
-                <dd>Último mensaje: 21/07/2020 10:26</dd>
-                <dt>Tema3: Las Interfaces de Usuarios Web</dt>
-                <dd>Número de mensajes: 4</dd>
-                <dd>Último mensaje: 16/08/2020 21:54</dd>
-                <dt>Tema4: WIMP y GUI</dt>
-                <dd>Número de mensajes: 2</dd>
-                <dd>Último mensaje: Ayer 16:32</dd>
-                <dt>Tema5: Heurísticas y Patrones</dt>
-                <dd>Número de mensajes: 1</dd>
-                <dd>Último mensaje: Hoy 08:24</dd>
-            </dl>
+            <!-- Foro 4 -->
+
+            <input type="checkbox" name="my-input" id="forosCheck4" class="checkOculto">
+            <label for="forosCheck4" class="tituloTema">Tema4: WIMP y GUI</label>
+            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje4">3</b></h4>
+            <h4 class="bajoTitulo" id="ultimoMensajeTiempo4">Último mensaje: 28/07/2020 16:32</h4>
+
+            <div class="temaAbierto" id="mtema4">
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">27/07/2020 15:32</h6>
+                    </div>
+                    <p class="mensajeForo">¿Alguien se acuerda de que significa Wimp?</p>
+                </div>
+
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                        <h6 class="fechaForo">27/07/2020 16:32</h6>
+                    </div>
+                    <p class="mensajeForo">ventanas, iconos, menús y puntero</p>
+                </div>
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                        <h6 class="fechaForo">28/07/2020 16:32</h6>
+                    </div>
+                    <p class="mensajeForo">Muchas gracias </p>
+                </div>
+
+                <div id="mensaje4"></div>
+                <div class="nuevoMensajeForo">
+                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                    <div class="emisorNuevo">
+                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                            height="40">
+                        <h4 class="nombreForo personaActual"> Desconocido </h4>
+                    </div>
+                    <textarea id="tema4Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                    <input type="submit"
+                        onclick="nuevoMensajeForo('tema4Nuevo','mensaje4','numeroMensaje4','ultimoMensajeTiempo4')">
+                </div>
+            </div>
+
+           <!-- Foro 5 -->
+
+            <input type="checkbox" name="my-input" id="forosCheck5" class="checkOculto">
+            <label for="forosCheck5" class="tituloTema">Tema5: Heurísticas y Patrones</label>
+            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje5">1</b></h4>
+            <h4 class="bajoTitulo" id="ultimoMensajeTiempo5">Último mensaje: 02/08/2020 08:32</h4>
+
+            <div class="temaAbierto" id="mtema5">
+                <div class="mensaje">
+                    <div class="emisor">
+                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                        <h6 class="fechaForo">02/08/2020 08:32</h6>
+                    </div>
+                    <p class="mensajeForo">¿Cuándo vamos a dar este tema?</p>
+                </div>
+                <div id="mensaje5"></div>
+                <div class="nuevoMensajeForo">
+                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                    <div class="emisorNuevo">
+                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                            height="40">
+                        <h4 class="nombreForo personaActual"> Desconocido </h4>
+                    </div>
+                    <textarea id="tema5Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                    <input type="submit"
+                        onclick="nuevoMensajeForo('tema5Nuevo','mensaje5','numeroMensaje5','ultimoMensajeTiempo5')">
+                </div>
+            </div>
         </section>
 
 
         <div class="contenerdorEstudiantes" id="califications">
-            <h1 id="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
+            <h1 class="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
             <div class="centrar">
                 <table>
                     <tr>
