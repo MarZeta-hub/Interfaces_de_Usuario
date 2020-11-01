@@ -3,6 +3,7 @@
 
 /* ----- Características Principales en todos los tamaños ----- */
 
+
 body{
     /* Para todos los contenedores*/
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +43,25 @@ header{
     display:none;
     margin:20px;
     text-align: center;
+}
 
+.temasTopic:hover{
+    font-size: 40px;
+    cursor: pointer;
+}
+#videoArt1{
+    display:none;
+}
+#videoArt2{
+    display:none;
+}
+#videoArt3{
+    display:none;
+}
+
+.mostrarTema:hover{
+    cursor: pointer;
+    font-size: 30px;
 }
 
 .flexVideos{
@@ -76,10 +95,6 @@ header{
 video{
     width: 100%;
     height: auto;
-}
-
-article{
-    margin-bottom: 50px;
 }
 
 

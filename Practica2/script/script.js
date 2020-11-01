@@ -109,6 +109,12 @@ function topics(){
     document.getElementById("navCurso").style.display = "none";
     document.getElementById("navTopics2").style.display = "none";
     document.getElementById("paginaActual").innerHTML = 'Curso';
+    document.getElementById("videoArt1").style.display = "none";
+    document.getElementById("videoArt2").style.display = "none";
+    document.getElementById("videoArt3").style.display = "none";
+    document.getElementById("tema1").style.display = "block";
+    document.getElementById("tema2").style.display = "block";
+    document.getElementById("tema3").style.display = "block";
 }
 
 function foros(){
@@ -204,4 +210,36 @@ window.addEventListener('click', function(e){
 function abrirCalendario(){
     document.getElementById("calendario").style.display ="block";
 }
+  $(document).ready(function(){
+ 
+    $('.temasTopic').click(function(){
+      $('body, html').animate({
+        scrollTop: '0px'
+      }, 300);
+    });
+  });
 
+
+  function mostrarTemas1(){
+    topics();
+    document.getElementById("tema1").style.display = "block";
+    document.getElementById("videoArt1").style.display = "block";
+    document.getElementById("tema2").style.display = "none";
+    document.getElementById("tema3").style.display = "none";
+  }
+  
+  function mostrarTemas2(){
+    topics();
+    document.getElementById("tema2").style.display = "block";
+    document.getElementById("videoArt2").style.display = "block";
+    document.getElementById("tema3").style.display = "none";
+    document.getElementById("tema1").style.display = "none";
+  }
+  
+  function mostrarTemas3(){
+    topics();
+    document.getElementById("tema3").style.display = "block";
+    document.getElementById("videoArt3").style.display = "block";
+    document.getElementById("tema1").style.display = "none";
+    document.getElementById("tema2").style.display = "none";
+  }

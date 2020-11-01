@@ -30,9 +30,9 @@
                   
                 </div>
             </div>
-            <img id="logo" src="images/user.svg" alt="Icono No Encontrado" width="20" height="20">
-            <h1 id="tituloPag"> Interfaces de Usuario </h1>
-            <h1 id="paginaActual"> Curso</h1>
+            <img class="navPointer" onclick="topics()" id="logo" src="images/user.svg" alt="Icono No Encontrado" width="20" height="20">
+            <h1 id="tituloPag"  class="navPointer" onclick="topics()"> Interfaces de Usuario </h1>
+            <h1 id="paginaActual" onclick="topics()"> Curso</h1>
         </div>
         <div class="alturaNav">
             <div class="navHeader">
@@ -51,7 +51,7 @@
 
     <div class="container">
         <nav>
-            <h4 id="h4Curso">Curso</h4>
+            <h4 id="h4Curso" class="navPointer" onclick="topics()">Curso</h4>
             <h5 onclick="students()" class="navPointer" id="navStudent">Estudiantes</h5>
             <h5 onclick="foros()" class="navPointer" id="navForo">Foro</h5>
             <h5 onclick="califications()" class="navPointer" id="navCalification">Calificaciones</h5>
@@ -63,6 +63,7 @@
         <section id="topics">
 
             <h2 id="tituloSeccion"> Curso 2020/2021</h2>
+
             <article id="tema1">
                 <!-- Tema 1 -->
 
@@ -75,7 +76,7 @@
                     </div>
 
                     <div class="textoIntro">
-                        <h2>TEMA 1: Introducción al HCI</h2>
+                        <h2 onclick="mostrarTemas1()" class="mostrarTema">TEMA 1: Introducción al HCI</h2>
                         <div class="texto">
                             <p>El HCI (human computer interaction o interacción entre ordenador y humano) es el estudio
                                 de
@@ -89,6 +90,7 @@
                     </div>
                 </div>
 
+                <div id="videoArt1">
                 <!-- VIDEO 1 -->
 
                 <div class="flexVideos">
@@ -142,7 +144,8 @@
                             <source src="images/logo/video_mute.mp4" type="video/mp4">
                         </video>
                     </div>
-                </div>
+                </div> 
+                </div>  
             </article>
 
             <!---  CAMBIO DE TEMA   -->
@@ -158,8 +161,8 @@
                     </div>
 
                     <div class="textoIntro">
-                        <h2>TEMA 2: Las Interfaces de Usuario</h2>
-                        <div class="texto">
+                        <h2 onclick="mostrarTemas2()" class="mostrarTema">TEMA 2: Las Interfaces de Usuario</h2>
+                        <div class="texto"> 
                             <p>Una interfaz de usuario es la forma de comunicación que tiene un ordenador con un ser
                                 humano.
                                 En
@@ -172,7 +175,7 @@
                 </div>
 
                 <!-- VIDEO 1 -->
-
+                <div id="videoArt2">
                 <div class="flexVideos">
                     <div class="titulotexto">
                         <h2>Video 1: Funciones principales de las Interfaces de Usuario</h2>
@@ -221,6 +224,7 @@
                         </video>
                     </div>
                 </div>
+            </div>
             </article>
 
             <!---  CAMBIO DE TEMA   -->
@@ -235,7 +239,7 @@
                     </div>
 
                     <div class="textoIntro">
-                        <h2>TEMA 3: Las Interfaces de Usuario Web</h2>
+                        <h2 onclick="mostrarTemas3()" class="mostrarTema">TEMA 3: Las Interfaces de Usuario Web</h2>
                         <div class="texto">
                             <p>Una Interfaz de Usuario Web es un conjunto de elementos donde el contenido se muestra en
                                 un
@@ -249,7 +253,7 @@
                 </div>
 
                 <!-- VIDEO 1-->
-
+                <div id="videoArt3">
                 <div class="flexVideos">
                     <div class="titulotexto">
                         <h2>Video 1: Principios básicos sobre el diseño</h2>
@@ -299,9 +303,8 @@
                         </video>
                     </div>
                 </div>
-
+                </div>
             </article>
-
         </section>
 
         <div class="contenerdorEstudiantes" id="students">
@@ -748,21 +751,20 @@
             <div id="ultimosEventos">
                 <dl>
                     <dt>Últimos eventos</dt>
-                    <dd onclick="foros()">1/10 - Creación foro tema 1</dd>
-                    <dd  onclick="foros()">1/10 - Creación foro tema 2</dd>
-                    <dd >10/10 - Tema 1 </dd>
-                    <dd onclick="topics()" >11/10 - Vídeos tema 1 </dd>
-                    <dd>17/10 - Tema 2 </dd>
-                    <dd onclick="topics()" >18/10 - Vídeos tema 2 </dd>
-                    <dd onclick="foros()">18/10 - Creación foro tema 3</dd>
-                    <dd>25/10 - Tema 3 </dd>
-                    <dd onclick="topics()" >26/10 - Vídeos tema 3 </dd> 
-                    <dd onclick="foros()" >26/10 - Creación foro tema 4</dd>
-                    <dd onclick="foros()">26/10 - Creación foro tema 5</dd>
+                    <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 1</dd>
+                    <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 2</dd>
+                    <dd onclick="topics()" class="navPointer">10/10 - Tema 1 </dd>
+                    <dd onclick="mostrarTemas1()" class="navPointer">11/10 - Vídeos tema 1 </dd>
+                    <dd onclick="topics()" class="navPointer">17/10 - Tema 2 </dd>
+                    <dd onclick="mostrarTemas2()" class="navPointer" >18/10 - Vídeos tema 2 </dd>
+                    <dd onclick="foros()" class="navPointer">18/10 - Creación foro tema 3</dd>
+                    <dd onclick="topics()" class="navPointer">25/10 - Tema 3 </dd>
+                    <dd onclick="mostrarTemas3()" class="navPointer" >26/10 - Vídeos tema 3 </dd> 
+                    <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 4</dd>
+                    <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 5</dd>
                 </dl>
 
-                
-
+        
             </div>
             <div id="proximosEventos">
                 <dl>
