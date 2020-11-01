@@ -135,11 +135,11 @@ td, th {
     text-align:center; /*Centrados en el eje x*/
 }
 
-.ultimosEventos{
+#ultimosEventos{
     margin:10px;
 }
 
-.proximosEventos{
+#proximosEventos{
     margin:10px;
 }
 
@@ -391,6 +391,26 @@ demás se ocultan mediante javascript*/
     height: 50px;
     margin-top: 10px;
     margin-bottom: 6px;
+
+}
+
+#calendario{
+    display:none;
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin-left:40%;
+   
+}
+
+#tituloCalendario{
+    cursor: pointer;
+}
+
+#tituloCalendario:hover{
+    font-size: 30px;
+    cursor: pointer;
 }
 
 /*------------------------------------------------------------------*/
@@ -449,7 +469,8 @@ demás se ocultan mediante javascript*/
     }
 
         /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
-    aside{ 
+    aside{
+        display:block;
         border: 1px solid #000000;
         width: 25%;
     }
@@ -479,8 +500,6 @@ demás se ocultan mediante javascript*/
         margin-right: 40px;
         font-size:10px;
     }  
-
-
 }
 
 
@@ -568,7 +587,7 @@ demás se ocultan mediante javascript*/
         width: 75%; }
     
     /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
-    aside{ display: none !important; }
+    aside{ display: none; }
     
     h4{ font-size:15px; }
     
@@ -580,6 +599,10 @@ demás se ocultan mediante javascript*/
         margin-right: 30px;
         font-size:10px;
     }  
+    #calendario{
+        margin-left:10%;
+    }
+
 }
 
 
@@ -624,6 +647,10 @@ demás se ocultan mediante javascript*/
         width: 100%;
     }
 
+    aside{ 
+        width:100%;
+    }
+
     .container{
         /* Container incluye las tres partes centrales 
          * de la página que son nav, section y aside 
@@ -631,13 +658,12 @@ demás se ocultan mediante javascript*/
         margin-right: 10px;
         margin-left: 10px;
     }
+
     .contenerdorEstudiantes {
         margin: 0px;    
         padding: 0px;
         width: 100%;
     }
-
-    aside{ display: none;}
 
     footer{
         display:flex;
@@ -646,4 +672,7 @@ demás se ocultan mediante javascript*/
         font-size:10px;
     }  
 
+    #calendario{
+        margin-left:auto;
+    }
 }

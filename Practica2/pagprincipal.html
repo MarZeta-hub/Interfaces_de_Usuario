@@ -3,9 +3,15 @@
 
 <head>
     <title>Página principal</title>
+    <link rel="stylesheet" href="style/simple-calendar.css">
     <link rel="stylesheet" href="style/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/jquery.simple-calendar.js"></script>
     <script src="script/script.js"></script>
+    
+    
+
 </head>
 
 <body>
@@ -15,15 +21,13 @@
                 <input type="checkbox" name="my-input" id="yes">
                 <label id="labelMovil" for="yes">☰</label>
                 <div class="dropdown-content">
-                    <a href="studentsList.html">
-                        <h5>Estudiantes</h5>
-                    </a>
-                    <a href="foro.html">
-                        <h5>Foro</h5>
-                    </a>
-                    <a href="calificaciones.html">
-                        <h5>Calificaciones</h5>
-                    </a>
+                    <h5 onclick="students()" class="navPointer" >Estudiantes</h5>
+                    <h5 onclick="foros()" class="navPointer" >Foro</h5>
+                    <h5 onclick="califications()" class="navPointer">Calificaciones</h5>
+                    <h5 onclick="topics()" class="navPointer">Curso</h5>
+                    <h5 onclick="ultimo()" class="navPointer" >Últimos Eventos</h5>
+                    <h5 onclick="proximo()" class="navPointer" >Próximos Eventos</h5>
+                  
                 </div>
             </div>
             <img id="logo" src="images/user.svg" alt="Icono No Encontrado" width="20" height="20">
@@ -734,50 +738,44 @@
                 </table>
             </div>
         </div>
+        <div id="espacio"></div>
+        <div id="calendario"></div>
 
+        <aside id="aside">
 
-
-
-
-
-        <aside>
-            <div class="ultimosEventos">
+            <div id="ultimosEventos">
                 <dl>
-                    <dt>
-                        Últimos eventos
-                    </dt>
-                    <dd><a href="pagprincipal.html">
-                            <h5>03/10 -Nuevos videos subidos</h5>
-                        </a></dd>
-                    <dd><a href="pagprincipal.html">
-                            <h5>03/10 -Nuevo tema añadido</h5>
-                        </a></dd>
-                    <dd><a href="foro.html">
-                            <h5>07/10 -Nuevos mensajes en el foro</h5>
-                        </a></dd>
+                    <dt>Últimos eventos</dt>
+                    <dd onclick="foros()">1/10 - Creación foro tema 1</dd>
+                    <dd  onclick="foros()">1/10 - Creación foro tema 2</dd>
+                    <dd >10/10 - Tema 1 </dd>
+                    <dd onclick="topics()" >11/10 - Vídeos tema 1 </dd>
+                    <dd>17/10 - Tema 2 </dd>
+                    <dd onclick="topics()" >18/10 - Vídeos tema 2 </dd>
+                    <dd onclick="foros()">18/10 - Creación foro tema 3</dd>
+                    <dd>25/10 - Tema 3 </dd>
+                    <dd onclick="topics()" >26/10 - Vídeos tema 3 </dd> 
+                    <dd onclick="foros()" >26/10 - Creación foro tema 4</dd>
+                    <dd onclick="foros()">26/10 - Creación foro tema 5</dd>
                 </dl>
 
+                
+
             </div>
-            <div class="proximosEventos">
+            <div id="proximosEventos">
                 <dl>
-                    <dt>
-                        Próximos eventos
-                    </dt>
-                    <dd>10/10 -Tema 6 </dd>
-                    <dd>10/10 -Videos tema 6 </dd>
-                    <dd>12/10 -Creacion foro tema 6</dd>
-                    <dd>22/10 -Tema 7 </dd>
-                    <dd>22/10 -Videos tema 7 </dd>
-                    <dd>22/10 -Creacion foro tema 7</dd>
-                    <dd>02/11 -Tema 8 </dd>
-                    <dd>02/11 -Videos tema 8 </dd>
-                    <dd>02/11 -Creacion foro tema 8</dd>
-                    <dd>16/11-Tema 9 </dd>
-                    <dd>16/11 -Videos tema 9 </dd>
-                    <dd>16/11 -Creacion foro tema 9</dd>
-                    <dd>05/12 -Tema 10 </dd>
-                    <dd>05/12 -Videos tema 10 </dd>
-                    <dd>05/12 -Creacion foro tema 10</dd>
+                    <dt onclick="abrirCalendario()" id="tituloCalendario">Próximos Eventos</dt>
+                    <dd>10/11 - Tema 4 </dd>
+                    <dd>11/11 - Videos tema 4 </dd>
+                    <dd>17/11 - Tema 5 </dd>
+                    <dd>18/11 - Videos tema 5 </dd>
+                    <dd>18/11 - Creacion foro tema 6</dd>
+                    <dd>25/11 - Tema 6 </dd>
+                    <dd>26/11 - Videos tema 6 </dd> 
+                    <dd>26/11 - Creacion foro tema 7</dd>
+                    <dd>01/12 - Tema 7 </dd>
+                    <dd>02/12 - Videos tema 7 </dd>
+                   
                 </dl>
             </div>
         </aside>
