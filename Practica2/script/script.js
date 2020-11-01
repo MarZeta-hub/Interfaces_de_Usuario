@@ -68,79 +68,109 @@ $(function(){
       });
     
 })
-
-
-function students(){
-    document.getElementById("foro").style.display = "none";
-    document.getElementById("califications").style.display = "none";
-    document.getElementById("topics").style.display = "none";
-    document.getElementById("students").style.display = "block";
-    document.getElementById("navStudent").style.display = "none";
-    document.getElementById("navCurso").style.display = "block";
-    document.getElementById("navForo").style.display = "block";
-    document.getElementById("navCalification").style.display = "block";
-    document.getElementById("h4Curso").innerHTML = 'Estudiante';
+function ocultarTodo(){
+  document.getElementById("foro").style.display = "none";
+  document.getElementById("califications").style.display = "none";
+  document.getElementById("topics").style.display = "none";
+  document.getElementById("students").style.display = "none";
+  blockAndNoneAside();
 }
 
-function topics(){
-    document.getElementById("foro").style.display = "none";
-    document.getElementById("students").style.display = "none";
-    document.getElementById("califications").style.display = "none";
-    
+function bloquearTodoLateral(){
+  document.getElementById("navStudent").style.display = "block";
+  document.getElementById("navCurso").style.display = "block";
+  document.getElementById("navForo").style.display = "block";
+  document.getElementById("navCalification").style.display = "block";
+
+
+  document.getElementById("navStudent2").style.display = "block";
+  document.getElementById("navForo2").style.display = "block";
+  document.getElementById("navCalifications2").style.display = "block";
+  document.getElementById("navTopics2").style.display = "block";
+  ultimoProximoNav();
+  
+}
+
+function students(){
+    ocultarTodo();
+    bloquearTodoLateral();
+    document.getElementById("students").style.display = "block";
+    document.getElementById("navStudent").style.display = "none";
+    document.getElementById("navStudent2").style.display = "none";
+    document.getElementById("h4Curso").innerHTML = 'Estudiantes';
+    document.getElementById("paginaActual").innerHTML = 'Estudiantes';
+}
+
+function topics(){ 
+    ocultarTodo();
+    bloquearTodoLateral();
     document.getElementById("topics").style.display = "block";
     document.getElementById("h4Curso").innerHTML = 'Curso';
-    document.getElementById("navStudent").style.display = "block";
     document.getElementById("navCurso").style.display = "none";
-    document.getElementById("navForo").style.display = "block";
-    document.getElementById("navCalification").style.display = "block";
+    document.getElementById("navTopics2").style.display = "none";
+    document.getElementById("paginaActual").innerHTML = 'Curso';
 }
 
 function foros(){
+    ocultarTodo();
+    bloquearTodoLateral();
     document.getElementById("foro").style.display = "block";
-    document.getElementById("students").style.display = "none";
-    document.getElementById("califications").style.display = "none";
-    document.getElementById("topics").style.display = "none";
     document.getElementById("h4Curso").innerHTML = 'Foro';
-    document.getElementById("navStudent").style.display = "block";
-    document.getElementById("navCurso").style.display = "block";
     document.getElementById("navForo").style.display = "none";
-    document.getElementById("navCalification").style.display = "block";
+    document.getElementById("navForo2").style.display = "none";
+    document.getElementById("paginaActual").innerHTML = 'Foro';
 }
 
 function califications(){
-    document.getElementById("topics").style.display = "none";
-    document.getElementById("students").style.display = "none";
-    document.getElementById("foro").style.display = "none";
+    ocultarTodo();
+    bloquearTodoLateral();
     document.getElementById("califications").style.display = "block";
     document.getElementById("h4Curso").innerHTML = 'Calificaciones';
-    document.getElementById("navStudent").style.display = "block";
-    document.getElementById("navCurso").style.display = "block";
-    document.getElementById("navForo").style.display = "block";
     document.getElementById("navCalification").style.display = "none";
+    document.getElementById("navCalifications2").style.display = "none";
+    document.getElementById("paginaActual").innerHTML = 'Calificaciones';
 }
 
 function ultimo(){
-    document.getElementById("topics").style.display = "none";
-    document.getElementById("students").style.display = "none";
-    document.getElementById("foro").style.display = "none";
-    document.getElementById("califications").style.display = "none";
+    ocultarTodo();
+    bloquearTodoLateral()
     document.getElementById("proximosEventos").style.display = "none";
     document.getElementById("ultimosEventos").style.display = "block";
     document.getElementById("aside").style.display = "block";
+    document.getElementById("navUltimo").style.display = "none";
+    document.getElementById("navUltimo2").style.display = "none";
+    document.getElementById("paginaActual").innerHTML = 'Últimos Eventos';
 }
 
 function proximo(){
-  document.getElementById("topics").style.display = "none";
-  document.getElementById("students").style.display = "none";
-  document.getElementById("foro").style.display = "none";
-  document.getElementById("califications").style.display = "none";
+  ocultarTodo();
+  bloquearTodoLateral()
   document.getElementById("proximosEventos").style.display = "block";
   document.getElementById("ultimosEventos").style.display = "none";
   document.getElementById("aside").style.display = "block";
+  document.getElementById("navProximo").style.display = "none";
+  document.getElementById("navProximo2").style.display = "none";
+  document.getElementById("paginaActual").innerHTML = 'Próximos Eventos';
 }
 
+function blockAndNoneAside(){
+  if(screen.width < 768) document.getElementById("aside").style.display = "none";
+  else document.getElementById("aside").style.display = "block";
+}
 
-
+function ultimoProximoNav(){
+  if(screen.width < 768) {
+    document.getElementById("navUltimo2").style.display = "block";
+    document.getElementById("navProximo2").style.display = "block";
+    document.getElementById("navProximo").style.display = "block";
+    document.getElementById("navUltimo").style.display = "block";
+  }else {
+    document.getElementById("navUltimo2").style.display = "none";
+    document.getElementById("navProximo2").style.display = "none";
+    document.getElementById("navProximo").style.display = "none";
+    document.getElementById("navUltimo").style.display = "none";
+  }
+}
 
 function email(){
     console.log("hola");
