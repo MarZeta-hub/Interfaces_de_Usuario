@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script/jquery-3.5.1.min.js"></script>
     <script src="script/jquery.simple-calendar.js"></script>
+    <script src="script/jquery.table2excel.js"></script>
     <script src="script/script.js"></script>
     
-    
-
 </head>
 
 <body>
@@ -36,15 +35,9 @@
         </div>
         <div class="alturaNav">
             <div class="navHeader">
-                <a href="https://aulaglobal.uc3m.es">
-                    <h3>Aula Global</h3>
-                </a>
-                <a href="https://aulaglobal.uc3m.es/course/view.php?id=111344">
-                    <h3>Página de Contenidos IU</h3>
-                </a>
-                <a href="https://aplicaciones.uc3m.es/cpa/generaFicha?est=218&asig=13882&idioma=1&anio=2020">
-                    <h3>Ficha de la asignatura</h3>
-                </a>
+                <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46" height="40">
+                <h4  id="nombreHeader"> Desconocido </h4>
+                <img class="imagenActual" src="images/cerrarSesion.svg" alt="Perfil no Encontrado" width="36" height="30">
             </div>
         </div>
     </header>
@@ -673,7 +666,7 @@
         <div class="contenerdorEstudiantes" id="califications">
             <h1 class="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
             <div class="centrar">
-                <table>
+                <table id="tabla">
                     <tr>
                         <th>Estudiante</th>
                         <th>Actividad 1</th>
@@ -741,7 +734,9 @@
                         <th>5.8</th>
                     </tr>
                 </table>
+                
             </div>
+            <button class="botonDescargar" onclick="descargarExcel()">Descarga las notas</button>
         </div>
         <div id="espacio"></div>
         <div id="calendario"></div>

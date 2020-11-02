@@ -135,6 +135,11 @@ table {
     margin: auto; /*centrada*/
 }
 
+.centrar{
+    display:inline-flex;
+    text-align: center;
+    width: 100%;
+}
 
 td, th {
     /* Columnas y filas de las tablas*/
@@ -142,6 +147,10 @@ td, th {
     text-align: center; /* Centrar dentro de la tabla*/
     margin: 0 auto; /* Sin margen entre celdas */
     padding: 8px; /* Espacio dentro de las celdas*/
+}
+
+.botonDescargar{
+    float:right;
 }
 
 /* Títulos de la parte Central */
@@ -262,7 +271,6 @@ display: none;
 /* Parte central cuando seleccionas CALIFICACIONES*/
 #califications{
 display:none;
-
 }
 
 /* CURSOR TIPO PUNTERO*/
@@ -463,8 +471,15 @@ demás se ocultan mediante javascript*/
     }
 
     .navHeader{
-        display: inline-flex;
+        display: contents;
+        text-align: center;
         border: 1px solid #000000;
+    }
+
+    #nombreHeader{
+        margin:0px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     
     .container{
