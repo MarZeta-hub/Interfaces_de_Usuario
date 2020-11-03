@@ -104,10 +104,10 @@ function topics() {
   ocultarTodo();
   bloquearTodoLateral();
   document.getElementById("topics").style.display = "block";
-  document.getElementById("h4Curso").innerHTML = 'Curso';
+  document.getElementById("h4Curso").innerHTML = 'Mis asignaturas';
   document.getElementById("navCurso").style.display = "none";
   document.getElementById("navTopics2").style.display = "none";
-  document.getElementById("paginaActual").innerHTML = 'Curso';
+  document.getElementById("paginaActual").innerHTML = 'Mis asignaturas';
   document.getElementById("videoArt1").style.display = "none";
   document.getElementById("videoArt2").style.display = "none";
   document.getElementById("videoArt3").style.display = "none";
