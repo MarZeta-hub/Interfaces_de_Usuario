@@ -8,6 +8,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#calificacionesAlumno{
+    display:none;
+}
+
 header{
     /* Contenedor superior de la página */
     height: 50px;/* Altura definida */
@@ -135,7 +139,7 @@ table {
 }
 
 .centrar{
-    display:inline-flex;
+    display:block;
     text-align: center;
     width: 100%;
 }

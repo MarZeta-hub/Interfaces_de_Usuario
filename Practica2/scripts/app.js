@@ -23,6 +23,9 @@ for(var i = 0; i <cookies.length ; i++ ){
 		document.getElementById("nombreForoID4").innerText = nombre[1];
 		document.getElementById("nombreForoID5").innerText = nombre[1];
 		document.getElementById("nombreForoID1").innerText = nombre[1];
+		
+
+		
 	}
 	if(nombre[0] == "rol" || nombre[0] == " rol"){
 		if(nombre[1]=="estudiante"){

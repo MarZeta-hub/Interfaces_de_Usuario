@@ -12,7 +12,7 @@
     <script src="script/jquery.table2excel.js"></script>
     <script src="script/script.js"></script>
     <script src="scripts/app.js"></script>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> <meta content="utf-8" http-equiv="encoding">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 
 </head>
 
@@ -687,7 +687,7 @@
 
             <div class="contenerdorEstudiantes" id="califications">
                 <h1 class="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
-                <div class="centrar">
+                <div class="centrar" id="calificacionesProfesor">
                     <table id="tabla">
                         <tr>
                             <th>Estudiante</th>
@@ -756,9 +756,26 @@
                             <th>5.8</th>
                         </tr>
                     </table>
-
+                    <button class="botonDescargar" onclick="descargarExcel('profesor')">Descarga las notas</button>
                 </div>
-                <button class="botonDescargar" onclick="descargarExcel()">Descarga las notas</button>
+                <div id="calificacionesAlumno">
+                    <table id="tablaAlumno">
+                    <tr>
+                        <th>Estudiante</th>
+                        <th>Actividad 1</th>
+                        <th>Actividad 2</th>
+                        <th>Actividad 3</th>
+                    </tr>
+                    <tr>
+                        <th id="notasAlumno">Desconocido</th>
+                        <th>0.0</th>
+                        <th>7.0</th>
+                        <th>1.0</th>
+                    </tr>
+                </table>
+                <button class="botonDescargar" onclick="descargarExcel('alumno')">Descarga las notas</button>
+                </div>  
+                
             </div>
             <div id="espacio"></div>
             <div id="calendario"></div>

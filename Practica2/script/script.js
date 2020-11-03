@@ -88,7 +88,6 @@ function bloquearTodoLateral() {
   document.getElementById("navCalifications2").style.display = "block";
   document.getElementById("navTopics2").style.display = "block";
   ultimoProximoNav();
-
 }
 
 function students() {
@@ -135,6 +134,11 @@ function califications() {
   document.getElementById("navCalification").style.display = "none";
   document.getElementById("navCalifications2").style.display = "none";
   document.getElementById("paginaActual").innerHTML = 'Calificaciones';
+  if(obtenerRol() == "estudiante"){
+    document.getElementById("calificacionesAlumno").style.display = "block";
+    document.getElementById("calificacionesProfesor").style.display = "none";
+    document.getElementById("notasAlumno").innerText = document.getElementById("nombreHeader").innerText;
+  } 
 }
 
 function ultimo() {
@@ -244,11 +248,21 @@ function mostrarTemas3() {
   document.getElementById("tema2").style.display = "none";
 }
 
-function descargarExcel(){
-  $("#tabla").table2excel({
+function descargarExcel(quienes){
+  if(quienes == "profesor"){
+      $("#tabla").table2excel({
     filename: "Notas 20-21",
     fileext: ".xls"
   }); 
+  }
+  if(quienes == "alumno"){
+    console.log("gola");
+    $("#tablaAlumno").table2excel({
+  filename: "Notas 20-21 del al",
+  fileext: ".xls"
+}); 
+}
+
 }
 
 function cerrarSesion(){
