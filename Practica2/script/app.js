@@ -74,6 +74,7 @@ function iniciosesion(){
 	var isEmail = 0;
 	var isPass = 0;
 	for(var i = 0; i <cookies.length ; i++ ){
+		console.log(cookies[i]);
 		var nombre= cookies[i].split("=");
 		if(nombre[0] == "email" || nombre[0] == " email"){
 			var emailObtenido = nombre[1];
@@ -139,7 +140,7 @@ function registro(){
 //Verificar que el nombre y apellidos tiene un formato correcto
 	var letras1 = new RegExp(/^([a-zA-Z]+)(\s)([a-zA-Z]+)(\s)([a-zA-Z]+)$/);
 	if(!letras1.test(name)) {
-		alert("Un nombre no puede poseer numeros");
+		alert("Un nombre no puede poseer numeros, además de que debe añadir los apellidos");
 		return false;
 	}
 
@@ -185,6 +186,20 @@ function registro(){
 		alert("Las condiciones y politicas de privacidad no han sido aceptadas");
 		return false;
 	}
+//Verificar que el correo electrónico no es igual al anterior
+	var coockieAntigua = document.cookie;
+	coockieAntigua=  coockieAntigua.split(";");
+	for(var i = 0; i< coockieAntigua.length; i++){
+		var nombreCookie = coockieAntigua[i].split("=");
+		if(nombreCookie[i] == "email" || nombreCookie[i] == " email"){
+			if(nombreCookie[i+1]==remail){
+				alert("El correo que estás metiendo ya está en uso");
+				return false;
+			} else break;
+		}
+	}
+
+	//crear las nuevas cookies
 	var expiresdate = new Date(2068, 1, 02, 11, 20);
 	document.cookie = "email="+ remail+"; expires=" + expiresdate.toUTCString();
 	document.cookie = "pass="+ rpass+"; expires=" + expiresdate.toUTCString();
