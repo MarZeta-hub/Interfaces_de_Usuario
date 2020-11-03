@@ -77,13 +77,13 @@ function ocultarTodo() {
 }
 
 function bloquearTodoLateral() {
-  document.getElementById("navStudent").style.display = "block";
+  if(obtenerRol() != "estudiante"){
+    document.getElementById("navStudent2").style.display = "block";
+    document.getElementById("navStudent").style.display = "block";
+  }
   document.getElementById("navCurso").style.display = "block";
   document.getElementById("navForo").style.display = "block";
   document.getElementById("navCalification").style.display = "block";
-
-
-  document.getElementById("navStudent2").style.display = "block";
   document.getElementById("navForo2").style.display = "block";
   document.getElementById("navCalifications2").style.display = "block";
   document.getElementById("navTopics2").style.display = "block";
@@ -191,7 +191,7 @@ function nuevoMensajeForo(mensajeNuevo, lugarMensaje, numeroMensaje, ultimoTiemp
     return;
   }
   var imagenActual = document.getElementById("imagenActual").outerHTML;
-  var personaActual = document.getElementById("personaActual").innerHTML;
+  var personaActual = document.getElementById("nombreForoID1").innerHTML;
   var f = new Date();
   var fechaActual = f.getDate() + "/" + f.getMonth() + "/" + f.getFullYear() + "  " + f.getHours() + ":" + f.getMinutes();
   var nuevoTiempo = "Último mensaje: " + fechaActual;
@@ -249,4 +249,11 @@ function descargarExcel(){
     filename: "Notas 20-21",
     fileext: ".xls"
   }); 
+}
+
+function cerrarSesion(){
+        document.cookie = "isregistrado=false";
+				document.getElementById("registroeInicio").style.display= "block";
+				document.getElementById("usuarioRegistrado").style.display = "none";
+	
 }

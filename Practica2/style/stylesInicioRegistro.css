@@ -1,0 +1,178 @@
+
+/* Inicio del código CSS*/
+
+/* ----- Características Principales en todos los tamaños ----- */
+
+body{
+    /* Para todos los contenedores*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#usuarioRegistrado{
+    background-color: #ffffff;
+    display:none;
+}
+
+
+/*Ediccion de la parte del formulario de inicio*/
+.formularioini {
+    border-radius: 5%;
+    top: 38%;
+    right: 42%;
+    background:#9BADA0;
+    color:#fff; 
+    width: 320px;
+    height: 320px;
+    left: auto;
+    position: absolute;
+    text-align: center;
+}
+
+.formularioini img{
+    width: 30%;
+    position: absolute;
+    top: -15%;
+    left: 35%;
+}
+
+.contenedorini{
+    margin-top: 20%;
+
+}
+
+/*Ediccion de la parte del formulario de registro*/
+.formularioreg{
+    border-radius: 5%;
+    background:#9BADA0;
+    color:#fff; 
+    width: 580px;
+    height: 580px;
+    top: 20%;
+    right: 35%;
+    position: absolute;
+    
+}
+
+.formularioreg img{
+    width: 18%;
+    position: absolute;
+    top: -11%;
+    left: 38%;
+}
+
+
+.contenedoreg{
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+.campos{
+    margin-bottom: 5px;
+
+}
+
+.button{
+    text-align: center;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #FF1345;
+}
+
+#iniciosesion{
+    display: block;
+}
+
+#registro{
+    display: none;
+}
+
+h1{
+    font-size: 20px;
+    padding: 0px;
+}
+
+h2{
+    padding:0px;
+    margin:0px;
+}
+
+h4{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+h5{
+    margin:10px;
+    color:#0077ff;
+}
+
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS DE MÁS DE 769px (PC) -----*/
+@media (min-width: 769px){
+    
+    h3{
+        margin: 0px;
+        font-size: 13px;
+        padding-right: 7px;
+        padding-left: 8px;
+        color:#000000;
+    }
+
+    h4{ font-size:20px; }
+    
+    h5{ font-size:17px; }
+    
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS MÁS PEQUEÑAS QUE 768px (TABLET) -----*/
+@media (max-width:768px){
+
+    .formularioini {
+        right: 30%;
+
+    }
+
+    .formularioreg{
+        right: 12.5%;
+    }
+
+
+    h4{ font-size:15px; }
+    
+    h5{ font-size:12px; }
+
+}
+
+
+@media (max-width:768px){
+
+    .formularioini {
+        right: 23%;
+
+    }
+
+    .formularioreg{
+        right: 1%;
+    }
+
+
+    h4{ font-size:15px; }
+    
+    h5{ font-size:12px; }
+
+}
+

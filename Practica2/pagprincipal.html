@@ -5,791 +5,941 @@
     <title>Página principal</title>
     <link rel="stylesheet" href="style/simple-calendar.css">
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/stylesInicioRegistro.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script/jquery-3.5.1.min.js"></script>
     <script src="script/jquery.simple-calendar.js"></script>
     <script src="script/jquery.table2excel.js"></script>
     <script src="script/script.js"></script>
-    
+    <script src="scripts/app.js"></script>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> <meta content="utf-8" http-equiv="encoding">
+
 </head>
 
 <body>
-    <header>
-        <div class="nombrePag">
-            <div class="dropdown">
-                <input type="checkbox" name="my-input" id="yes">
-                <label id="labelMovil" for="yes">☰</label>
-                <div class="dropdown-content">
-                    <h5 onclick="students()" id="navStudent2" class="navPointer" >Estudiantes</h5>
-                    <h5 onclick="foros()" id="navForo2" class="navPointer" >Foro</h5>
-                    <h5 onclick="califications()" id="navCalifications2"class="navPointer">Calificaciones</h5>
-                    <h5 onclick="topics()" id="navTopics2" class="navPointer">Curso</h5>
-                    <h5 onclick="ultimo()" id="navUltimo2"class="navPointer" >Últimos Eventos</h5>
-                    <h5 onclick="proximo()" id="navProximo2"class="navPointer" >Próximos Eventos</h5>
-                  
+    <div id="usuarioRegistrado">
+        <header>
+            <div class="nombrePag">
+                <div class="dropdown">
+                    <input type="checkbox" name="my-input" id="yes">
+                    <label id="labelMovil" for="yes">☰</label>
+                    <div class="dropdown-content">
+                        <h5 onclick="students()" id="navStudent2" class="navPointer">Estudiantes</h5>
+                        <h5 onclick="foros()" id="navForo2" class="navPointer">Foro</h5>
+                        <h5 onclick="califications()" id="navCalifications2" class="navPointer">Calificaciones</h5>
+                        <h5 onclick="topics()" id="navTopics2" class="navPointer">Curso</h5>
+                        <h5 onclick="ultimo()" id="navUltimo2" class="navPointer">Últimos Eventos</h5>
+                        <h5 onclick="proximo()" id="navProximo2" class="navPointer">Próximos Eventos</h5>
+
+                    </div>
+                </div>
+                <img class="navPointer" onclick="topics()" id="logo" src="images/user.svg" alt="Icono No Encontrado"
+                    width="20" height="20">
+                <h1 id="tituloPag" class="navPointer" onclick="topics()"> Interfaces de Usuario </h1>
+                <h1 id="paginaActual" onclick="topics()"> Curso</h1>
+            </div>
+            <div class="alturaNav">
+                <div class="navHeader">
+                    <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                        height="40">
+                    <h4 id="nombreHeader"> Desconocido </h4>
+                    <img class="imagenActual navPointer" src="images/cerrarSesion.svg" onclick="cerrarSesion()" alt="Perfil no Encontrado" width="36"  height="30">
                 </div>
             </div>
-            <img class="navPointer" onclick="topics()" id="logo" src="images/user.svg" alt="Icono No Encontrado" width="20" height="20">
-            <h1 id="tituloPag"  class="navPointer" onclick="topics()"> Interfaces de Usuario </h1>
-            <h1 id="paginaActual" onclick="topics()"> Curso</h1>
+        </header>
+
+        <div class="container">
+            <nav>
+                <h4 id="h4Curso" class="navPointer" onclick="topics()">Curso</h4>
+                <h5 onclick="students()" class="navPointer" id="navStudent">Estudiantes</h5>
+                <h5 onclick="foros()" class="navPointer" id="navForo">Foro</h5>
+                <h5 onclick="califications()" class="navPointer" id="navCalification">Calificaciones</h5>
+                <h5 onclick="topics()" class="navPointer" id="navCurso">Curso</h5>
+                <h5 onclick="ultimo()" class="navPointer" id="navUltimo">Últimos Eventos</h5>
+                <h5 onclick="proximo()" class="navPointer" id="navProximo">Próximos Eventos</h5>
+            </nav>
+
+            <section id="topics">
+
+                <h2 id="tituloSeccion"> Curso 2020/2021</h2>
+
+                <article id="tema1">
+                    <!-- Tema 1 -->
+
+                    <!-- INTRODUCCION AL TEMA -->
+
+                    <div class="flexIntros">
+                        <div class="imagenTopic">
+                            <!-- Necesario para ocultar en tablet y móvil-->
+                            <img src="images/logo/HCI.png" alt="Topic no Encontrado" width="120" height="120">
+                        </div>
+
+                        <div class="textoIntro">
+                            <h2 onclick="mostrarTemas1()" class="mostrarTema">TEMA 1: Introducción al HCI</h2>
+                            <div class="texto">
+                                <p>El HCI (human computer interaction o interacción entre ordenador y humano) es el
+                                    estudio
+                                    de
+                                    cómo
+                                    se diseñan, implementan o/y se usan los sistemas informatizados con los humanos. En
+                                    este
+                                    tema
+                                    vamos a ver qué es un producto interactivo, un concepto más en profundidad del HCI y
+                                    conoceremos
+                                    cómo funcionan los modelos que se centran en el concepto de interacción.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="videoArt1">
+                        <!-- VIDEO 1 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 1: Producto Interactivo</h2>
+                                <div class="texto">
+                                    <p>La interfaz debe diseñarse para que esa tarea se haga
+                                        de manera eficiente y satisfactoria</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 2 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 2: Concepto en profundidad HCI</h2>
+                                <div class="texto">
+                                    <p>Muchas innovaciones tecnológicas dependen del
+                                        diseño de la interfaz de usuario para transformar su
+                                        complejidad tecnológica en un producto útil, utilizable
+                                        y atractivo para sus usuarios</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 3 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 3: Funcionamiento de los modelos</h2>
+                                <div class="texto">
+                                    <p>Los usuarios pueden interactuar con los objetos y navegar en un entorno
+                                        3D con un alto sentido de presencia, estando totalmente absorto.
+                                        Un ejemplo son los entornos para entrenamiento, tales como
+                                        simuladores de vuelos</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!---  CAMBIO DE TEMA   -->
+
+                <article id="tema2">
+                    <!-- Tema 2 -->
+
+                    <!-- INTRODUCCION AL TEMA -->
+
+                    <div class="flexIntros">
+                        <div class="imagenTopic">
+                            <img src="images/logo/IU.png" alt="Perfil No encontrado" width="120" height="120">
+                        </div>
+
+                        <div class="textoIntro">
+                            <h2 onclick="mostrarTemas2()" class="mostrarTema">TEMA 2: Las Interfaces de Usuario</h2>
+                            <div class="texto">
+                                <p>Una interfaz de usuario es la forma de comunicación que tiene un ordenador con un ser
+                                    humano.
+                                    En
+                                    este tema vamos a ver las funciones principales y los tipos de interfaces de
+                                    usuario,
+                                    donde
+                                    se
+                                    diferencian entre la forma de interactuar con el usuario y su construcción.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VIDEO 1 -->
+                    <div id="videoArt2">
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 1: Funciones principales de las Interfaces de Usuario</h2>
+                                <div class="texto">
+                                    <p>Las ventanas se inventaron para superar las limitaciones físicas de la pantalla
+                                        de un ordenador para visualizar más información y ejecutar más tareas.</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 2 -->
+
+                        <div class="flexVideos">
+
+                            <div class="titulotexto">
+                                <h2>Video 2: Diferencias en las interacciones de los usuarios</h2>
+                                <div class="texto">
+                                    <p>Si se abren más ventanas podría resultar difícil gestionarlas y para ello se
+                                        tiene
+                                        la posibilidad de reducirlas a un icono en la barra de estado, listar todas las
+                                        que están abiertas o moverse fácilmente de una a otra</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4"></video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 3 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 3: Diferencias entre la construcción de las interacciones</h2>
+                                <div class="texto">
+                                    <p>Los componentes de una ventana deben estar relacionados</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!---  CAMBIO DE TEMA   -->
+
+                <article id="tema3">
+                    <!-- Tema 3 -->
+
+                    <!-- INTRODUCCION AL TEMA -->
+                    <div class="flexIntros">
+                        <div class="imagenTopic">
+                            <img src="images/logo/IUW.png" alt="Perfil No encontrado" width="120" height="120">
+                        </div>
+
+                        <div class="textoIntro">
+                            <h2 onclick="mostrarTemas3()" class="mostrarTema">TEMA 3: Las Interfaces de Usuario Web</h2>
+                            <div class="texto">
+                                <p>Una Interfaz de Usuario Web es un conjunto de elementos donde el contenido se muestra
+                                    en
+                                    un
+                                    navegador, se ha obtenido todos esos elementos desde un pc distinto al tuyo y te
+                                    deja
+                                    interactuar con ellos. En este tema vamos a ver los principios básicos sobre el
+                                    diseño,
+                                    las
+                                    técnicas para mejorar el diseño y la simplicidad en las interfaces.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- VIDEO 1-->
+                    <div id="videoArt3">
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 1: Principios básicos sobre el diseño</h2>
+                                <div class="texto">
+                                    <p>Modales: si el usuario no puede hacer otra cosa hasta que haya
+                                        terminado las acciones por las cuáles se abrió la caja de diálogo</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 2 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 2: Técnicas para mejorar el diseño</h2>
+                                <div class="texto">
+                                    <p>No modales: si el usuario puede acceder a otras funcionalidades del
+                                        programa mientras el diálogo está abierto</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- VIDEO 3 -->
+
+                        <div class="flexVideos">
+                            <div class="titulotexto">
+                                <h2>Video 3: Simplicidad en las interfaces</h2>
+                                <div class="texto">
+                                    <p>La realidad virtual es una simulación gráfica generada por ordenador que
+                                        genera “la ilusión de participar en un entorno no real en vez de
+                                        observarlo desde el exterior” (Gigante, 1993)</p>
+                                </div>
+                            </div>
+                            <div class="videoCurso">
+                                <video width="400" height="240" controls>
+                                    <source src="images/logo/video_mute.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <div class="contenerdorEstudiantes" id="students">
+                <h1 class="studentsList"> Listado de Estudiantes del Curso 2020/2021</h1>
+                <div class="centrar">
+                    <table>
+                        <tr>
+                            <th>Foto</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Email</th>
+                            <th>Correo</th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Misky</th>
+                            <th>Orosco Vallejo</th>
+                            <th>MiskyOroscoVallejo@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Cándice</th>
+                            <th>Núñez Altamirano</th>
+                            <th>CandiceNunezAltamirano@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p2.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Hanna</th>
+                            <th>Alonso Soria</th>
+                            <th>HannaAlonsoSoria@superrito.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p4.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Balbina</th>
+                            <th>Rodríguez Valenzuela</th>
+                            <th>BalbinaRodriguezValenzuela@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p6.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Adhelmar</th>
+                            <th>Galván Tejada</th>
+                            <th>AdhelmarGalvanTejada@superrito.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Hannah</th>
+                            <th>Prieto Rolón</th>
+                            <th>HannahPrietoRolon@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p9.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Agnus</th>
+                            <th>Quesada Oquendo</th>
+                            <th>AgnusQuesadaOquendo@superrito.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p7.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Marta</th>
+                            <th>Olivo Rangel</th>
+                            <th>MartaOlivoRangel@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p8.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Viridiana</th>
+                            <th>Saavedra Echevarría</th>
+                            <th>ViridianaSaavedraEchevarria@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            </th>
+                            <th>Próspero</th>
+                            <th>Roque Quintero</th>
+                            <th>ProsperoRoqueQuintero@gustr.com</th>
+                            <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado"
+                                    width="46" height="33" onclick="email()">
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <section id="foro">
+                <h2 class="studentsList"> Foro de Estudiantes del Curso 2020/2021</h2>
+
+                <!-- Foro 1 -->
+
+                <input type="checkbox" name="my-input" id="forosCheck" class="checkOculto">
+                <label for="forosCheck" class="tituloTema">Tema1: Introducción al HCI</label>
+                <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje1">4</b></h4>
+                <h4 class="bajoTitulo" id="ultimoMensajeTiempo1">Último mensaje: 17/07/2020 19:42</h4>
+                <div class="temaAbierto" id="mtema1">
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                            <h6 class="fechaForo">16/07/2020 14:30</h6>
+                        </div>
+                        <p class="mensajeForo">¿Alguien sabe donde están los apuntes de la asignatura?</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Hannah Prieto Rolón </h4>
+                            <h6 class="fechaForo">16/07/2020 17:50</h6>
+                        </div>
+                        <p class="mensajeForo"> No lo sé Misky, la última clase dijo que pronto los subiría</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">16/07/2020 22:30</h6>
+                        </div>
+                        <p class="mensajeForo">Y...¿alguien conoce cuándo es el examen de esta parte?</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                            <h6 class="fechaForo">17/07/2020 19:42</h6>
+                        </div>
+                        <p class="mensajeForo">El examen dijo que será dentro de dos semanas y que cuando pueda subirá
+                            los apuntes.</p>
+                    </div>
+                    <div id="mensaje1"></div>
+                    <div class="nuevoMensajeForo">
+                        <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                        <div class="emisorNuevo">
+                            <img id="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                                height="40">
+                            <h4 class="nombreForo" id="nombreForoID1" > Desconocido </h4>
+                        </div>
+                        <textarea id="tema1Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                        <input type="submit"
+                            onclick="nuevoMensajeForo('tema1Nuevo','mensaje1','numeroMensaje1','ultimoMensajeTiempo1')">
+                    </div>
+                </div>
+
+                <!-- Foro 2 -->
+
+                <input type="checkbox" name="my-input" id="forosCheck2" class="checkOculto">
+                <label for="forosCheck2" class="tituloTema">Tema2: Las Interfaces de Usuarios</label>
+                <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje2">6</b></h4>
+                <h4 class="bajoTitulo" id="ultimoMensajeTiempo2">Último mensaje: 18/07/2020 11:30</h4>
+                <div class="temaAbierto" id="mtema2">
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                            <h6 class="fechaForo">16/07/2020 14:30</h6>
+                        </div>
+                        <p class="mensajeForo">¿Os acordais de cuales eran los tipos de interfaces de ventana?</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Hannah Prieto Rolón </h4>
+                            <h6 class="fechaForo">16/07/2020 17:50</h6>
+                        </div>
+                        <p class="mensajeForo"> Salió en el test de la semana pasada, ¿No?</p>
+                    </div>
+
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                            <h6 class="fechaForo">17/07/2020 11:30</h6>
+                        </div>
+                        <p class="mensajeForo">Si, pero no me acuerdo</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">17/07/2020 22:30</h6>
+                        </div>
+                        <p class="mensajeForo">Era algo como MDI, SDI y TDI</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                            <h6 class="fechaForo">18/07/2020 09:42</h6>
+                        </div>
+                        <p class="mensajeForo">¿Y los tipos de ventana?</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">18/07/2020 11:30</h6>
+                        </div>
+                        <p class="mensajeForo">Tilted windows, Overlapping windows y Cascading windows</p>
+                    </div>
+                    <div id="mensaje2"></div>
+                    <div class="nuevoMensajeForo">
+                        <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                        <div class="emisorNuevo">
+                            <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                                height="40">
+                            <h4 class="nombreForo personaActual" id="nombreForoID2"> Desconocido </h4>
+                        </div>
+                        <textarea id="tema2Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                        <input type="submit"
+                            onclick="nuevoMensajeForo('tema2Nuevo','mensaje2','numeroMensaje2','ultimoMensajeTiempo2')">
+                    </div>
+                </div>
+
+                <!-- Foro 3 -->
+
+
+                <input type="checkbox" name="my-input" id="forosCheck3" class="checkOculto">
+                <label for="forosCheck3" class="tituloTema">Tema3: Las Interfaces de Usuarios Web</label>
+                <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje3">3</b></h4>
+                <h4 class="bajoTitulo" id="ultimoMensajeTiempo3">Último mensaje: 22/07/2020 11:30</h4>
+                <div class="temaAbierto" id="mtema3">
+
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">22/07/2020 10:30</h6>
+                        </div>
+                        <p class="mensajeForo">¿Los ejercicios de esta parte cuándo se entregan?</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Próspero Roque Quintero</h4>
+                            <h6 class="fechaForo">22/07/2020 10:42</h6>
+                        </div>
+                        <p class="mensajeForo">El 1 de octubre antes de las 11 de la noche</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">22/07/2020 11:30</h6>
+                        </div>
+                        <p class="mensajeForo">¡Gracias!</p>
+                    </div>
+
+
+
+                    <div id="mensaje3"></div>
+                    <div class="nuevoMensajeForo">
+                        <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                        <div class="emisorNuevo">
+                            <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                                height="40">
+                            <h4 class="nombreForo personaActual" id="nombreForoID3" > Desconocido </h4>
+                        </div>
+                        <textarea id="tema3Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                        <input type="submit"
+                            onclick="nuevoMensajeForo('tema3Nuevo','mensaje3','numeroMensaje3','ultimoMensajeTiempo3')">
+                    </div>
+                </div>
+
+                <!-- Foro 4 -->
+
+                <input type="checkbox" name="my-input" id="forosCheck4" class="checkOculto">
+                <label for="forosCheck4" class="tituloTema">Tema4: WIMP y GUI</label>
+                <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje4">3</b></h4>
+                <h4 class="bajoTitulo" id="ultimoMensajeTiempo4">Último mensaje: 28/07/2020 16:32</h4>
+
+                <div class="temaAbierto" id="mtema4">
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">27/07/2020 15:32</h6>
+                        </div>
+                        <p class="mensajeForo">¿Alguien se acuerda de que significa Wimp?</p>
+                    </div>
+
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                            <h6 class="fechaForo">27/07/2020 16:32</h6>
+                        </div>
+                        <p class="mensajeForo">ventanas, iconos, menús y puntero</p>
+                    </div>
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
+                            <h6 class="fechaForo">28/07/2020 16:32</h6>
+                        </div>
+                        <p class="mensajeForo">Muchas gracias </p>
+                    </div>
+
+                    <div id="mensaje4"></div>
+                    <div class="nuevoMensajeForo">
+                        <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                        <div class="emisorNuevo">
+                            <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                                height="40">
+                            <h4 class="nombreForo personaActual" id="nombreForoID4"> Desconocido </h4>
+                        </div>
+                        <textarea id="tema4Nuevo" rows="5" class="mensajeNuevo"  name="description"></textarea>
+                        <input type="submit"
+                            onclick="nuevoMensajeForo('tema4Nuevo','mensaje4','numeroMensaje4','ultimoMensajeTiempo4')">
+                    </div>
+                </div>
+
+                <!-- Foro 5 -->
+
+                <input type="checkbox" name="my-input" id="forosCheck5" class="checkOculto">
+                <label for="forosCheck5" class="tituloTema">Tema5: Heurísticas y Patrones</label>
+                <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje5">1</b></h4>
+                <h4 class="bajoTitulo" id="ultimoMensajeTiempo5">Último mensaje: 02/08/2020 08:32</h4>
+
+                <div class="temaAbierto" id="mtema5">
+                    <div class="mensaje">
+                        <div class="emisor">
+                            <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
+                            <h4 class="nombreForo">Misky Orosco Vallejo</h4>
+                            <h6 class="fechaForo">02/08/2020 08:32</h6>
+                        </div>
+                        <p class="mensajeForo">¿Cuándo vamos a dar este tema?</p>
+                    </div>
+                    <div id="mensaje5"></div>
+                    <div class="nuevoMensajeForo">
+                        <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
+                        <div class="emisorNuevo">
+                            <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
+                                height="40">
+                            <h4 class="nombreForo personaActual" id="nombreForoID5"> Desconocido </h4>
+                        </div>
+                        <textarea id="tema5Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
+                        <input type="submit"
+                            onclick="nuevoMensajeForo('tema5Nuevo','mensaje5','numeroMensaje5','ultimoMensajeTiempo5')">
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="contenerdorEstudiantes" id="califications">
+                <h1 class="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
+                <div class="centrar">
+                    <table id="tabla">
+                        <tr>
+                            <th>Estudiante</th>
+                            <th>Actividad 1</th>
+                            <th>Actividad 2</th>
+                            <th>Actividad 3</th>
+                        </tr>
+                        <tr>
+                            <th>Misky Orosco Vallejo</th>
+                            <th>0.0</th>
+                            <th>7.0</th>
+                            <th>1.0</th>
+                        </tr>
+                        <tr>
+                            <th>Cándice Núñez Altamirano</th>
+                            <th>1.9</th>
+                            <th>1.0</th>
+                            <th>4.1</th>
+                        </tr>
+                        <tr>
+                            <th>Hanna Alonso Soria</th>
+                            <th>7.6</th>
+                            <th>2.7</th>
+                            <th>2.8</th>
+                        </tr>
+                        <tr>
+                            <th>Balbina Rodríguez Valenzuela</th>
+                            <th>6.1</th>
+                            <th>6.9</th>
+                            <th>8.4</th>
+                        </tr>
+                        <tr>
+                            <th>Adhelmar Galván Tejada</th>
+                            <th>9.8</th>
+                            <th>4.6</th>
+                            <th>8.0</th>
+                        </tr>
+                        <tr>
+                            <th>Hannah Prieto Rolón</th>
+                            <th>8.7</th>
+                            <th>5.5</th>
+                            <th>8.0</th>
+                        </tr>
+                        <tr>
+                            <th>Agnus Quesada Oquendo</th>
+                            <th>7.5</th>
+                            <th>4.8</th>
+                            <th>1.4</th>
+                        </tr>
+                        <tr>
+                            <th>Marta Olivo Rangel</th>
+                            <th>0.6</th>
+                            <th>2.4</th>
+                            <th>0.1</th>
+                        </tr>
+                        <tr>
+                            <th>Viridiana Saavedra Echevarría</th>
+                            <th>1.5</th>
+                            <th>5.9</th>
+                            <th>0.3</th>
+                        </tr>
+                        <tr>
+                            <th>Próspero Roque Quintero</th>
+                            <th>3.8</th>
+                            <th>8.1</th>
+                            <th>5.8</th>
+                        </tr>
+                    </table>
+
+                </div>
+                <button class="botonDescargar" onclick="descargarExcel()">Descarga las notas</button>
+            </div>
+            <div id="espacio"></div>
+            <div id="calendario"></div>
+
+            <aside id="aside">
+
+                <div id="ultimosEventos">
+                    <dl>
+                        <dt>Últimos eventos</dt>
+                        <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 1</dd>
+                        <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 2</dd>
+                        <dd onclick="topics()" class="navPointer">10/10 - Tema 1 </dd>
+                        <dd onclick="mostrarTemas1()" class="navPointer">11/10 - Vídeos tema 1 </dd>
+                        <dd onclick="topics()" class="navPointer">17/10 - Tema 2 </dd>
+                        <dd onclick="mostrarTemas2()" class="navPointer">18/10 - Vídeos tema 2 </dd>
+                        <dd onclick="foros()" class="navPointer">18/10 - Creación foro tema 3</dd>
+                        <dd onclick="topics()" class="navPointer">25/10 - Tema 3 </dd>
+                        <dd onclick="mostrarTemas3()" class="navPointer">26/10 - Vídeos tema 3 </dd>
+                        <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 4</dd>
+                        <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 5</dd>
+                    </dl>
+
+
+                </div>
+                <div id="proximosEventos">
+                    <dl>
+                        <dt onclick="abrirCalendario()" id="tituloCalendario">Próximos Eventos</dt>
+                        <dd>10/11 - Tema 4 </dd>
+                        <dd>11/11 - Videos tema 4 </dd>
+                        <dd>17/11 - Tema 5 </dd>
+                        <dd>18/11 - Videos tema 5 </dd>
+                        <dd>18/11 - Creacion foro tema 6</dd>
+                        <dd>25/11 - Tema 6 </dd>
+                        <dd>26/11 - Videos tema 6 </dd>
+                        <dd>26/11 - Creacion foro tema 7</dd>
+                        <dd>01/12 - Tema 7 </dd>
+                        <dd>02/12 - Videos tema 7 </dd>
+
+                    </dl>
+                </div>
+            </aside>
         </div>
-        <div class="alturaNav">
-            <div class="navHeader">
-                <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46" height="40">
-                <h4  id="nombreHeader"> Desconocido </h4>
-                <img class="imagenActual" src="images/cerrarSesion.svg" alt="Perfil no Encontrado" width="36" height="30">
+        <footer>
+            <div class="partepie">
+                <a href="https://www.uc3m.es/Inicio"><b>¡Visita la página web de la Universidad!</b></a>
             </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <nav>
-            <h4 id="h4Curso" class="navPointer" onclick="topics()">Curso</h4>
-            <h5 onclick="students()" class="navPointer" id="navStudent">Estudiantes</h5>
-            <h5 onclick="foros()" class="navPointer" id="navForo">Foro</h5>
-            <h5 onclick="califications()" class="navPointer" id="navCalification">Calificaciones</h5>
-            <h5 onclick="topics()" class="navPointer" id="navCurso">Curso</h5>
-            <h5 onclick="ultimo()" class="navPointer" id="navUltimo">Últimos Eventos</h5>
-            <h5 onclick="proximo()" class="navPointer" id="navProximo">Próximos Eventos</h5>
-        </nav>
-
-        <section id="topics">
-
-            <h2 id="tituloSeccion"> Curso 2020/2021</h2>
-
-            <article id="tema1">
-                <!-- Tema 1 -->
-
-                <!-- INTRODUCCION AL TEMA -->
-
-                <div class="flexIntros">
-                    <div class="imagenTopic">
-                        <!-- Necesario para ocultar en tablet y móvil-->
-                        <img src="images/logo/HCI.png" alt="Topic no Encontrado" width="120" height="120">
-                    </div>
-
-                    <div class="textoIntro">
-                        <h2 onclick="mostrarTemas1()" class="mostrarTema">TEMA 1: Introducción al HCI</h2>
-                        <div class="texto">
-                            <p>El HCI (human computer interaction o interacción entre ordenador y humano) es el estudio
-                                de
-                                cómo
-                                se diseñan, implementan o/y se usan los sistemas informatizados con los humanos. En este
-                                tema
-                                vamos a ver qué es un producto interactivo, un concepto más en profundidad del HCI y
-                                conoceremos
-                                cómo funcionan los modelos que se centran en el concepto de interacción.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="videoArt1">
-                <!-- VIDEO 1 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 1: Producto Interactivo</h2>
-                        <div class="texto">
-                            <p>La interfaz debe diseñarse para que esa tarea se haga
-                                de manera eficiente y satisfactoria</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 2 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 2: Concepto en profundidad HCI</h2>
-                        <div class="texto">
-                            <p>Muchas innovaciones tecnológicas dependen del
-                                diseño de la interfaz de usuario para transformar su
-                                complejidad tecnológica en un producto útil, utilizable
-                                y atractivo para sus usuarios</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 3 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 3: Funcionamiento de los modelos</h2>
-                        <div class="texto">
-                            <p>Los usuarios pueden interactuar con los objetos y navegar en un entorno
-                                3D con un alto sentido de presencia, estando totalmente absorto.
-                                Un ejemplo son los entornos para entrenamiento, tales como
-                                simuladores de vuelos</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div> 
-                </div>  
-            </article>
-
-            <!---  CAMBIO DE TEMA   -->
-
-            <article id="tema2">
-                <!-- Tema 2 -->
-
-                <!-- INTRODUCCION AL TEMA -->
-
-                <div class="flexIntros">
-                    <div class="imagenTopic">
-                        <img src="images/logo/IU.png" alt="Perfil No encontrado" width="120" height="120">
-                    </div>
-
-                    <div class="textoIntro">
-                        <h2 onclick="mostrarTemas2()" class="mostrarTema">TEMA 2: Las Interfaces de Usuario</h2>
-                        <div class="texto"> 
-                            <p>Una interfaz de usuario es la forma de comunicación que tiene un ordenador con un ser
-                                humano.
-                                En
-                                este tema vamos a ver las funciones principales y los tipos de interfaces de usuario,
-                                donde
-                                se
-                                diferencian entre la forma de interactuar con el usuario y su construcción.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VIDEO 1 -->
-                <div id="videoArt2">
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 1: Funciones principales de las Interfaces de Usuario</h2>
-                        <div class="texto">
-                            <p>Las ventanas se inventaron para superar las limitaciones físicas de la pantalla
-                                de un ordenador para visualizar más información y ejecutar más tareas.</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 2 -->
-
-                <div class="flexVideos">
-
-                    <div class="titulotexto">
-                        <h2>Video 2: Diferencias en las interacciones de los usuarios</h2>
-                        <div class="texto">
-                            <p>Si se abren más ventanas podría resultar difícil gestionarlas y para ello se tiene
-                                la posibilidad de reducirlas a un icono en la barra de estado, listar todas las
-                                que están abiertas o moverse fácilmente de una a otra</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4"></video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 3 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 3: Diferencias entre la construcción de las interacciones</h2>
-                        <div class="texto">
-                            <p>Los componentes de una ventana deben estar relacionados</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
+            <div class="partepie">
+                <a href="https://www.uc3m.es/inicio/informacion-legal"><b>Visita la página legal</b></a>
             </div>
-            </article>
-
-            <!---  CAMBIO DE TEMA   -->
-
-            <article id="tema3">
-                <!-- Tema 3 -->
-
-                <!-- INTRODUCCION AL TEMA -->
-                <div class="flexIntros">
-                    <div class="imagenTopic">
-                        <img src="images/logo/IUW.png" alt="Perfil No encontrado" width="120" height="120">
-                    </div>
-
-                    <div class="textoIntro">
-                        <h2 onclick="mostrarTemas3()" class="mostrarTema">TEMA 3: Las Interfaces de Usuario Web</h2>
-                        <div class="texto">
-                            <p>Una Interfaz de Usuario Web es un conjunto de elementos donde el contenido se muestra en
-                                un
-                                navegador, se ha obtenido todos esos elementos desde un pc distinto al tuyo y te deja
-                                interactuar con ellos. En este tema vamos a ver los principios básicos sobre el diseño,
-                                las
-                                técnicas para mejorar el diseño y la simplicidad en las interfaces.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- VIDEO 1-->
-                <div id="videoArt3">
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 1: Principios básicos sobre el diseño</h2>
-                        <div class="texto">
-                            <p>Modales: si el usuario no puede hacer otra cosa hasta que haya
-                                terminado las acciones por las cuáles se abrió la caja de diálogo</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 2 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 2: Técnicas para mejorar el diseño</h2>
-                        <div class="texto">
-                            <p>No modales: si el usuario puede acceder a otras funcionalidades del
-                                programa mientras el diálogo está abierto</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <!-- VIDEO 3 -->
-
-                <div class="flexVideos">
-                    <div class="titulotexto">
-                        <h2>Video 3: Simplicidad en las interfaces</h2>
-                        <div class="texto">
-                            <p>La realidad virtual es una simulación gráfica generada por ordenador que
-                                genera “la ilusión de participar en un entorno no real en vez de
-                                observarlo desde el exterior” (Gigante, 1993)</p>
-                        </div>
-                    </div>
-                    <div class="videoCurso">
-                        <video width="400" height="240" controls>
-                            <source src="images/logo/video_mute.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                </div>
-            </article>
-        </section>
-
-        <div class="contenerdorEstudiantes" id="students">
-            <h1 class="studentsList"> Listado de Estudiantes del Curso 2020/2021</h1>
-            <div class="centrar">
-                <table>
-                    <tr>
-                        <th>Foto</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Email</th>
-                        <th>Correo</th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Misky</th>
-                        <th>Orosco Vallejo</th>
-                        <th>MiskyOroscoVallejo@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Cándice</th>
-                        <th>Núñez Altamirano</th>
-                        <th>CandiceNunezAltamirano@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p2.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Hanna</th>
-                        <th>Alonso Soria</th>
-                        <th>HannaAlonsoSoria@superrito.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p4.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Balbina</th>
-                        <th>Rodríguez Valenzuela</th>
-                        <th>BalbinaRodriguezValenzuela@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p6.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Adhelmar</th>
-                        <th>Galván Tejada</th>
-                        <th>AdhelmarGalvanTejada@superrito.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Hannah</th>
-                        <th>Prieto Rolón</th>
-                        <th>HannahPrietoRolon@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p9.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Agnus</th>
-                        <th>Quesada Oquendo</th>
-                        <th>AgnusQuesadaOquendo@superrito.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p7.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Marta</th>
-                        <th>Olivo Rangel</th>
-                        <th>MartaOlivoRangel@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p8.jpg" alt="Perfil No encontrado" width="46" height="40"></th>
-                        <th>Viridiana</th>
-                        <th>Saavedra Echevarría</th>
-                        <th>ViridianaSaavedraEchevarria@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                    <tr>
-                        <th><img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        </th>
-                        <th>Próspero</th>
-                        <th>Roque Quintero</th>
-                        <th>ProsperoRoqueQuintero@gustr.com</th>
-                        <th><img src="images/estudiantes/mail.png" class="email" alt="Perfil No encontrado" width="46"
-                                height="33" onclick="email()">
-                        </th>
-                    </tr>
-                </table>
+            <div class="partepie">
+                <b>Desarrollado por Marcelino Tena Blanco y David Rey Tartajo</b>
             </div>
-        </div>
-
-        <section id="foro">
-            <h2 class="studentsList"> Foro de Estudiantes del Curso 2020/2021</h2>
-
-            <!-- Foro 1 -->
-
-            <input type="checkbox" name="my-input" id="forosCheck" class="checkOculto">
-            <label for="forosCheck" class="tituloTema">Tema1: Introducción al HCI</label>
-            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje1">4</b></h4>
-            <h4 class="bajoTitulo" id="ultimoMensajeTiempo1">Último mensaje: 17/07/2020 19:42</h4>
-            <div class="temaAbierto" id="mtema1">
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                        <h6 class="fechaForo">16/07/2020 14:30</h6>
-                    </div>
-                    <p class="mensajeForo">¿Alguien sabe donde están los apuntes de la asignatura?</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Hannah Prieto Rolón </h4>
-                        <h6 class="fechaForo">16/07/2020 17:50</h6>
-                    </div>
-                    <p class="mensajeForo"> No lo sé Misky, la última clase dijo que pronto los subiría</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">16/07/2020 22:30</h6>
-                    </div>
-                    <p class="mensajeForo">Y...¿alguien conoce cuándo es el examen de esta parte?</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
-                        <h6 class="fechaForo">17/07/2020 19:42</h6>
-                    </div>
-                    <p class="mensajeForo">El examen dijo que será dentro de dos semanas y que cuando pueda subirá
-                        los apuntes.</p>
-                </div>
-                <div id="mensaje1"></div>
-                <div class="nuevoMensajeForo">
-                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
-                    <div class="emisorNuevo">
-                        <img id="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
-                            height="40">
-                        <h4 class="nombreForo" id="personaActual"> Desconocido </h4>
-                    </div>
-                    <textarea id="tema1Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
-                    <input type="submit"
-                        onclick="nuevoMensajeForo('tema1Nuevo','mensaje1','numeroMensaje1','ultimoMensajeTiempo1')">
-                </div>
-            </div>
-
-            <!-- Foro 2 -->
-
-            <input type="checkbox" name="my-input" id="forosCheck2" class="checkOculto">
-            <label for="forosCheck2" class="tituloTema">Tema2: Las Interfaces de Usuarios</label>
-            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje2">6</b></h4>
-            <h4 class="bajoTitulo" id="ultimoMensajeTiempo2">Último mensaje: 18/07/2020 11:30</h4>
-            <div class="temaAbierto" id="mtema2">
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                        <h6 class="fechaForo">16/07/2020 14:30</h6>
-                    </div>
-                    <p class="mensajeForo">¿Os acordais de cuales eran los tipos de interfaces de ventana?</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p5.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Hannah Prieto Rolón </h4>
-                        <h6 class="fechaForo">16/07/2020 17:50</h6>
-                    </div>
-                    <p class="mensajeForo"> Salió en el test de la semana pasada, ¿No?</p>
-                </div>
-
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                        <h6 class="fechaForo">17/07/2020 11:30</h6>
-                    </div>
-                    <p class="mensajeForo">Si, pero no me acuerdo</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">17/07/2020 22:30</h6>
-                    </div>
-                    <p class="mensajeForo">Era algo como MDI, SDI y TDI</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
-                        <h6 class="fechaForo">18/07/2020 09:42</h6>
-                    </div>
-                    <p class="mensajeForo">¿Y los tipos de ventana?</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">18/07/2020 11:30</h6>
-                    </div>
-                    <p class="mensajeForo">Tilted windows, Overlapping windows y Cascading windows</p>
-                </div>
-                <div id="mensaje2"></div>
-                <div class="nuevoMensajeForo">
-                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
-                    <div class="emisorNuevo">
-                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
-                            height="40">
-                        <h4 class="nombreForo personaActual"> Desconocido </h4>
-                    </div>
-                    <textarea id="tema2Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
-                    <input type="submit"
-                        onclick="nuevoMensajeForo('tema2Nuevo','mensaje2','numeroMensaje2','ultimoMensajeTiempo2')">
-                </div>
-            </div>
-
-            <!-- Foro 3 -->
-
-
-            <input type="checkbox" name="my-input" id="forosCheck3" class="checkOculto">
-            <label for="forosCheck3" class="tituloTema">Tema3: Las Interfaces de Usuarios Web</label>
-            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje3">3</b></h4>
-            <h4 class="bajoTitulo" id="ultimoMensajeTiempo3">Último mensaje: 22/07/2020 11:30</h4>
-            <div class="temaAbierto" id="mtema3">
-
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">22/07/2020  10:30</h6>
-                    </div>
-                    <p class="mensajeForo">¿Los ejercicios de esta parte cuándo se entregan?</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p10.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Próspero Roque Quintero</h4>
-                        <h6 class="fechaForo">22/07/2020  10:42</h6>
-                    </div>
-                    <p class="mensajeForo">El 1 de octubre antes de las 11 de la noche</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">22/07/2020 11:30</h6>
-                    </div>
-                    <p class="mensajeForo">¡Gracias!</p>
-                </div>
-
-
-
-                <div id="mensaje3"></div>
-                <div class="nuevoMensajeForo">
-                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
-                    <div class="emisorNuevo">
-                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
-                            height="40">
-                        <h4 class="nombreForo personaActual"> Desconocido </h4>
-                    </div>
-                    <textarea id="tema3Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
-                    <input type="submit"
-                        onclick="nuevoMensajeForo('tema3Nuevo','mensaje3','numeroMensaje3','ultimoMensajeTiempo3')">
-                </div>
-            </div>
-
-            <!-- Foro 4 -->
-
-            <input type="checkbox" name="my-input" id="forosCheck4" class="checkOculto">
-            <label for="forosCheck4" class="tituloTema">Tema4: WIMP y GUI</label>
-            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje4">3</b></h4>
-            <h4 class="bajoTitulo" id="ultimoMensajeTiempo4">Último mensaje: 28/07/2020 16:32</h4>
-
-            <div class="temaAbierto" id="mtema4">
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">27/07/2020 15:32</h6>
-                    </div>
-                    <p class="mensajeForo">¿Alguien se acuerda de que significa Wimp?</p>
-                </div>
-
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                        <h6 class="fechaForo">27/07/2020 16:32</h6>
-                    </div>
-                    <p class="mensajeForo">ventanas, iconos, menús y puntero</p>
-                </div>
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p1.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Cándice Núñez Altamirano</h4>
-                        <h6 class="fechaForo">28/07/2020 16:32</h6>
-                    </div>
-                    <p class="mensajeForo">Muchas gracias </p>
-                </div>
-
-                <div id="mensaje4"></div>
-                <div class="nuevoMensajeForo">
-                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
-                    <div class="emisorNuevo">
-                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
-                            height="40">
-                        <h4 class="nombreForo personaActual"> Desconocido </h4>
-                    </div>
-                    <textarea id="tema4Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
-                    <input type="submit"
-                        onclick="nuevoMensajeForo('tema4Nuevo','mensaje4','numeroMensaje4','ultimoMensajeTiempo4')">
-                </div>
-            </div>
-
-           <!-- Foro 5 -->
-
-            <input type="checkbox" name="my-input" id="forosCheck5" class="checkOculto">
-            <label for="forosCheck5" class="tituloTema">Tema5: Heurísticas y Patrones</label>
-            <h4 class="bajoTitulo">Número de mensajes: <b id="numeroMensaje5">1</b></h4>
-            <h4 class="bajoTitulo" id="ultimoMensajeTiempo5">Último mensaje: 02/08/2020 08:32</h4>
-
-            <div class="temaAbierto" id="mtema5">
-                <div class="mensaje">
-                    <div class="emisor">
-                        <img src="images/estudiantes/p3.jpg" alt="Perfil No encontrado" width="46" height="40">
-                        <h4 class="nombreForo">Misky Orosco Vallejo</h4>
-                        <h6 class="fechaForo">02/08/2020 08:32</h6>
-                    </div>
-                    <p class="mensajeForo">¿Cuándo vamos a dar este tema?</p>
-                </div>
-                <div id="mensaje5"></div>
-                <div class="nuevoMensajeForo">
-                    <h2 class="tituloAdd"> ¡Añade un nuevo mensaje al foro!</h2>
-                    <div class="emisorNuevo">
-                        <img class="imagenActual" src="images/desconocido.png" alt="Perfil no Encontrado" width="46"
-                            height="40">
-                        <h4 class="nombreForo personaActual"> Desconocido </h4>
-                    </div>
-                    <textarea id="tema5Nuevo" rows="5" class="mensajeNuevo" name="description"></textarea>
-                    <input type="submit"
-                        onclick="nuevoMensajeForo('tema5Nuevo','mensaje5','numeroMensaje5','ultimoMensajeTiempo5')">
-                </div>
-            </div>
-        </section>
-
-
-        <div class="contenerdorEstudiantes" id="califications">
-            <h1 class="studentsList"> Calificaciones de Estudiantes del Curso 2020/2021</h1>
-            <div class="centrar">
-                <table id="tabla">
-                    <tr>
-                        <th>Estudiante</th>
-                        <th>Actividad 1</th>
-                        <th>Actividad 2</th>
-                        <th>Actividad 3</th>
-                    </tr>
-                    <tr>
-                        <th>Misky Orosco Vallejo</th>
-                        <th>0.0</th>
-                        <th>7.0</th>
-                        <th>1.0</th>
-                    </tr>
-                    <tr>
-                        <th>Cándice Núñez Altamirano</th>
-                        <th>1.9</th>
-                        <th>1.0</th>
-                        <th>4.1</th>
-                    </tr>
-                    <tr>
-                        <th>Hanna Alonso Soria</th>
-                        <th>7.6</th>
-                        <th>2.7</th>
-                        <th>2.8</th>
-                    </tr>
-                    <tr>
-                        <th>Balbina Rodríguez Valenzuela</th>
-                        <th>6.1</th>
-                        <th>6.9</th>
-                        <th>8.4</th>
-                    </tr>
-                    <tr>
-                        <th>Adhelmar Galván Tejada</th>
-                        <th>9.8</th>
-                        <th>4.6</th>
-                        <th>8.0</th>
-                    </tr>
-                    <tr>
-                        <th>Hannah Prieto Rolón</th>
-                        <th>8.7</th>
-                        <th>5.5</th>
-                        <th>8.0</th>
-                    </tr>
-                    <tr>
-                        <th>Agnus Quesada Oquendo</th>
-                        <th>7.5</th>
-                        <th>4.8</th>
-                        <th>1.4</th>
-                    </tr>
-                    <tr>
-                        <th>Marta Olivo Rangel</th>
-                        <th>0.6</th>
-                        <th>2.4</th>
-                        <th>0.1</th>
-                    </tr>
-                    <tr>
-                        <th>Viridiana Saavedra Echevarría</th>
-                        <th>1.5</th>
-                        <th>5.9</th>
-                        <th>0.3</th>
-                    </tr>
-                    <tr>
-                        <th>Próspero Roque Quintero</th>
-                        <th>3.8</th>
-                        <th>8.1</th>
-                        <th>5.8</th>
-                    </tr>
-                </table>
-                
-            </div>
-            <button class="botonDescargar" onclick="descargarExcel()">Descarga las notas</button>
-        </div>
-        <div id="espacio"></div>
-        <div id="calendario"></div>
-
-        <aside id="aside">
-
-            <div id="ultimosEventos">
-                <dl>
-                    <dt>Últimos eventos</dt>
-                    <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 1</dd>
-                    <dd onclick="foros()" class="navPointer">1/10 - Creación foro tema 2</dd>
-                    <dd onclick="topics()" class="navPointer">10/10 - Tema 1 </dd>
-                    <dd onclick="mostrarTemas1()" class="navPointer">11/10 - Vídeos tema 1 </dd>
-                    <dd onclick="topics()" class="navPointer">17/10 - Tema 2 </dd>
-                    <dd onclick="mostrarTemas2()" class="navPointer" >18/10 - Vídeos tema 2 </dd>
-                    <dd onclick="foros()" class="navPointer">18/10 - Creación foro tema 3</dd>
-                    <dd onclick="topics()" class="navPointer">25/10 - Tema 3 </dd>
-                    <dd onclick="mostrarTemas3()" class="navPointer" >26/10 - Vídeos tema 3 </dd> 
-                    <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 4</dd>
-                    <dd onclick="foros()" class="navPointer">26/10 - Creación foro tema 5</dd>
-                </dl>
-
-        
-            </div>
-            <div id="proximosEventos">
-                <dl>
-                    <dt onclick="abrirCalendario()" id="tituloCalendario">Próximos Eventos</dt>
-                    <dd>10/11 - Tema 4 </dd>
-                    <dd>11/11 - Videos tema 4 </dd>
-                    <dd>17/11 - Tema 5 </dd>
-                    <dd>18/11 - Videos tema 5 </dd>
-                    <dd>18/11 - Creacion foro tema 6</dd>
-                    <dd>25/11 - Tema 6 </dd>
-                    <dd>26/11 - Videos tema 6 </dd> 
-                    <dd>26/11 - Creacion foro tema 7</dd>
-                    <dd>01/12 - Tema 7 </dd>
-                    <dd>02/12 - Videos tema 7 </dd>
-                   
-                </dl>
-            </div>
-        </aside>
+        </footer>
     </div>
-    <footer>
-        <div class="partepie">
-            <a href="https://www.uc3m.es/Inicio"><b>¡Visita la página web de la Universidad!</b></a>
+
+    <div id="registroeInicio">
+        <div id="iniciosesion">
+            <form class="formularioini" method="post" onsubmit="return iniciosesion()" id="formInicio">
+                <img src="images/user.svg" alt="Logo no encontrado">
+                <div class="contenedorini">
+                    <h1><i>Iniciar Sesion</i></h1>
+                    <div class="campos">
+                        <input type="email" placeholder="Inserte Correo Electronico" id="iemail" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <input type="password" placeholder="Inserte Contraseña" id="ipassword" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <button type="submit" value="Submit">Iniciar sesion</button>
+
+                    <p>¿Aun no tienes cuenta?</p>
+                    <button type="button" onclick="iregistro()">Registrate</button>
+                    <p class="warnings" id="iwarnings"></p>
+
+                </div>
+            </form>
         </div>
-        <div class="partepie">
-            <a href="https://www.uc3m.es/inicio/informacion-legal"><b>Visita la página legal</b></a>
+
+        <div id="registro">
+            <form class="formularioreg" method="post" onsubmit="return registro()" id="formRegistro">
+                <img src="images/user.svg" alt="Logo no encontrado">
+                <div class="contenedoreg">
+                    <h2>Registrate</h2>
+                    <h1><i>Informacion de la cuenta</i></h1>
+
+                    <div class="campos">
+                        <label for="grado">Nombre de usuario:</label>
+                        <input type="text" placeholder="Nombre de usuario" id="username" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">NIA:</label>
+                        <input type="text" placeholder="NIA" id="nia" required>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">Contraseña:</label>
+                        <input type="password" placeholder="Contraseña" id="rpassword" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <h1><i>Informacion personal</i></h1>
+
+                    <div class="campos">
+                        <label for="grado">Nombre y apellidos:</label>
+                        <input type="text" placeholder="Nombre y apellidos" id="name" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">Correo electrónico:</label>
+                        <input type="email" placeholder="Inserte Correo Electronico" id="remail" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">Fecha de nacimiento:</label>
+                        <input type="date" id="fecha" required><span class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">DNI:</label>
+                        <input type="text" placeholder="Documento de identificacion" id="dni" required><span
+                            class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="rol">Elige un Rol:</label>
+                        <select name="rol" id="rol" required>
+                            <option value="">-Seleccione un Rol-</option>
+                            <option value="administrador">Administrador</option>
+                            <option value="profesor">Profesor</option>
+                            <option value="estudiante">Estudiante</option>
+                        </select>
+                    </div>
+
+                    <div class="campos">
+                        <label for="grado">Elige un Grado:</label>
+                        <select name="grado" id="grado">
+                            <option value="grado">-Seleccione un Grado-</option>
+                            <option value="ingenieria informatica">Ingeniería Informática</option>
+                            <option value="grado en derecho">Grado en Derecho</option>
+                            <option value="grado en ingenieria indutrial">Grado en Ingeniería Industrial</option>
+                        </select>
+                    </div>
+
+                    <div class="campos">
+                        <label for="universidad">Universidad:</label>
+                        <input type="text" id="universidad" name="uc3m" value="Universidad Carlos III Madrid" required
+                            readonly><span class="barra"></span>
+                    </div>
+
+                    <div class="campos">
+                        <label for="idioma">Elige un Idioma:</label>
+                        <select name="idioma" id="idioma">
+                            <option value="idioma">-Seleccione un Idioma-</option>
+                            <option value="español"> Español </option>
+                            <option value="ingles"> Inglés </option>
+                            <option value="italiano"> Italiano </option>
+                        </select>
+                    </div>
+
+                    <br>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.
+                    <input type="checkbox" value="Registrate" class="button" id="condiciones" required><span
+                        class="barra"></span>
+                    <div class="button">
+                        <button type="submit" value="Submit">Guardar</button>
+                        <button type="reset">Borrar</button>
+
+                        <p>¿Ya tienes cuenta? <button type="button" onclick="iinicio()">Inicia sesion</button>
+
+                        <p class="warnings" id="rwarnings"></p>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="partepie">
-            <b>Desarrollado por Marcelino Tena Blanco y David Rey Tartajo</b>
-        </div>
-    </footer>
+    </div>
 </body>
 
 </html>
