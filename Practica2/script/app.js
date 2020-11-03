@@ -24,8 +24,6 @@ for(var i = 0; i <cookies.length ; i++ ){
 		document.getElementById("nombreForoID5").innerText = nombre[1];
 		document.getElementById("nombreForoID1").innerText = nombre[1];
 		
-
-		
 	}
 	if(nombre[0] == "rol" || nombre[0] == " rol"){
 		if(nombre[1]=="estudiante"){
@@ -95,7 +93,8 @@ function iniciosesion(){
 	}
 	
 	if(isEmail == 1 && isPass == 1){
-		document.cookie = "isregistrado=true";
+		var expiresdate = new Date(2068, 1, 02, 11, 20);
+		document.cookie = "isregistrado=true; SameSite=None"+"; expires=" + expiresdate.toUTCString();
 		return true;
 	}
 
@@ -154,7 +153,7 @@ function registro(){
 //Verificar que el DNI tiene un formato correcto
 	var letras2 = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
 	if(dni.charAt(8) != letras2[(dni.substring(0, 8))%23]) {
-		alert("El DNI debe contener solo numeros y una letra valida al final");
+		alert("El DNI debe contener solo numeros y una letra valida al final.\n Recuerda que en el DNI, la última letra verifica el número de DNI.");
 		return false;
 	}
 	if( !(/^\d{8}[A-Z]$/.test(dni)) ) {
@@ -186,11 +185,11 @@ function registro(){
 		alert("Las condiciones y politicas de privacidad no han sido aceptadas");
 		return false;
 	}
-
-	document.cookie = "email="+ remail;
-	document.cookie = "pass="+ rpass;
-	document.cookie = "nombre="+ name;
-	document.cookie = "rol="+ rol;
+	var expiresdate = new Date(2068, 1, 02, 11, 20);
+	document.cookie = "email="+ remail+"; expires=" + expiresdate.toUTCString();
+	document.cookie = "pass="+ rpass+"; expires=" + expiresdate.toUTCString();
+	document.cookie = "nombre="+ name+"; expires=" + expiresdate.toUTCString();
+	document.cookie = "rol="+ rol+"; expires=" + expiresdate.toUTCString();
 
 	return true;
 

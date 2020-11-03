@@ -266,8 +266,12 @@ function descargarExcel(quienes){
 }
 
 function cerrarSesion(){
-        document.cookie = "isregistrado=false";
+  var confirmacion = confirm("¿De verdad quieres cerrar sesión?");
+  console.log(confirmacion);
+  if(confirmacion){
+     document.cookie = "isregistrado=false";
 				document.getElementById("registroeInicio").style.display= "block";
 				document.getElementById("usuarioRegistrado").style.display = "none";
+  }
 	
 }
