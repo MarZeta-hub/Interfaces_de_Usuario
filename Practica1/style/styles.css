@@ -1,0 +1,487 @@
+
+/* Inicio del código CSS*/
+
+/* ----- Características Principales en todos los tamaños ----- */
+
+body{
+    /* Para todos los contenedores*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    /* Contenedor superior de la página */
+    height: 50px;/* Altura definida */
+    margin-top:10px; /* Margen superior para que no se pegue con el navegador */
+    padding-left: 10px; /* Para los contenidos de dentro del Header */
+    padding-right: 10px;
+    border: 1px solid #000000;
+}
+
+#logo{
+    /* Dentro de "nombrepag". Es el logo de la página */
+    margin-left:5px; 
+    margin-right: 10px;
+}
+
+.nombrePag{
+    /* Nombre y logo de la página dentro del Header */
+    display: inline-flex; /*Colocación de los objetos dentro del contenedor*/
+    align-items: center; /*Alinear contenido en el centro */
+    height: 50px; /* Altura del contenedor*/
+}
+
+.container{
+    /* Container incluye las tres partes centrales 
+     * de la página que son nav, section y aside 
+    */
+    display: flex;
+}
+
+/* PARTE CENTRAL EN PÁGINA PRINCIPAL */
+#tituloSeccion{
+    display:none;
+    margin:20px;
+    text-align: center;
+
+}
+
+.flexVideos{
+    display:flex;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.flexIntros{
+        display:flex;
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.textoIntro{
+    margin-left:10px;
+}
+
+.titulotexto{
+    order:1;
+    width:50%;
+    margin-bottom:10px;
+    margin-left:20px;
+}
+
+.videoCurso{
+    width: 50%;
+    order:0;
+}
+
+video{
+    width: 100%;
+    height: auto;
+}
+
+article{
+    margin-bottom: 50px;
+}
+
+
+/* Resto de páginas */
+
+section{
+    /* Centro de la página de Contenidos del curso*/
+    border: 1px solid #000000;
+    padding: 10px;
+    position: relative; /* Necesario para que en la versión móvil pueda superponer el nav*/
+}
+
+.contenerdorEstudiantes{
+    /* Centro de la página de Lista de Estudiantes*/
+    border: 1px solid #000000;
+    padding: 10px;
+    position: relative; /* Necesario para que en la versión móvil pueda superponer el nav*/
+}
+
+/* Cuando la tabla no quepa en el contenedor */
+@media screen and (max-width:1620px){
+    /* El valor 1620px no es un valor cualquiera, es cuando la página
+     * se hace suficientemente pequeña que hace que se distorsione la tabla y
+     * todo el contenido de la página 
+     */
+    table {
+        /*Para que la tabla no se salga de la
+        columna central*/
+        display: block; /* Bloqueamos la tabla*/
+        overflow-x: auto; /* Permitimos la barra de desplazamiento en el eje x*/
+    }
+}
+
+/* Tabla de estudiantes */
+table {
+    /* Tipo de borde */
+    border-collapse: collapse;
+    margin: auto; /*centrada*/
+}
+
+
+td, th {
+    /* Columnas y filas de las tablas*/
+    border: 1px solid #dddddd;
+    text-align: center; /* Centrar dentro de la tabla*/
+    margin: 0 auto; /* Sin margen entre celdas */
+    padding: 8px; /* Espacio dentro de las celdas*/
+}
+
+/* Títulos de la parte Central */
+#studentsList{
+    text-align:center; /*Centrados en el eje x*/
+}
+
+.ultimosEventos{
+    margin:10px;
+}
+
+.proximosEventos{
+    margin:10px;
+}
+
+h1{
+    font-size: 20px;
+    padding: 0px;
+}
+
+h2{
+    padding:0px;
+    margin:0px;
+}
+
+h4{
+    margin-top: 12px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+h5{
+    margin:10px;
+    color:#0077ff;
+}
+
+#foro{
+    padding-left:30px;
+}
+
+/* Listas */
+dt{
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+dd{
+    margin-left:0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+/* Pie de la página*/
+footer{
+    /* Contenedor completo del pie*/
+    display:flex;
+    font-size:10px;
+}   
+
+.partepie{
+    /* Cada bloque del pie */
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #000000;
+    font-size: 14px;
+}
+
+/* Navegador móvil integrado en el Header */
+.dropdown {
+    margin-right:5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Contenido del navegador móvil*/
+   .dropdown-content {
+    display: none;
+    position: absolute; /* Por encima del menu central*/
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra del menu*/
+    padding: 3px;
+    z-index: 1; /* Por encima del menú central. Tipicamente todos los contenedores tienen
+                 * z-index = 0, asi que si a este le pongo z-index=1 , entonces se superpone
+                 * al anterior */
+    margin-left: -10px;
+    margin-top: 37px;
+  }
+
+  /* Cuando haga check al checker se muestre el contido*/
+#yes:checked ~ .dropdown-content{
+    display:block;
+}
+
+/* Ocular el checker para utilizar el label elegido */
+#yes{
+    display:none;
+}
+
+#labelMovil{
+    cursor: pointer;
+}
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS DE MÁS DE 769px (PC) -----*/
+@media (min-width: 769px){
+    
+    header{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    #paginaActual{
+        display:none;
+    }
+    
+    .dropdown{
+        display:none;
+    }
+
+    .alturaNav{
+        display:flex;
+        align-items: center;
+        height: 50px;
+        float: right;
+    }
+
+    .navHeader{
+        display: inline-flex;
+        border: 1px solid #000000;
+    }
+    
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    /* Parte izquierda de la página, donde está el navegador de la página */
+    nav{ 
+        border: 1px solid #000000;
+        width: 25%; 
+    }
+    
+    /* Parte central de la página donde se encuentra todo el contenido */
+    section{ 
+        margin-left: 10px;
+        width: 50%; 
+        margin-right:10px;
+    }
+
+        /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
+    aside{ 
+        border: 1px solid #000000;
+        width: 25%;
+    }
+
+    .contenerdorEstudiantes{
+        margin-left: 10px;
+        width: 50%; 
+        margin-right:10px;
+    }
+    
+
+    h3{
+        margin: 0px;
+        font-size: 13px;
+        padding-right: 7px;
+        padding-left: 8px;
+        color:#000000;
+    }
+
+    h4{ font-size:20px; }
+    
+    h5{ font-size:17px; }
+    
+    footer{
+        display:flex;
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size:10px;
+    }  
+
+
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+
+
+/* ----- PARA PANTALLAS MÁS PEQUEÑAS QUE 768px (TABLET) -----*/
+@media (max-width:768px){
+
+
+    header{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+ 
+    #paginaActual{
+        display:block;
+    }
+
+    #tituloPag{
+        display:none;
+    }
+    .dropdown{
+        display:none;
+    }
+
+    .flexIntros{
+        display:block;
+    }
+
+    .flexVideos{
+        display:block;
+        margin-left:20px;
+    }
+
+    .textoIntro{
+        margin:0px;
+    }
+
+    .titulotexto{
+        width:100%;
+        margin-left:0px;
+
+    }
+    
+    .videoCurso{
+        width: 100%;
+    }
+
+    .imagenTopic{
+        display:none;
+    }
+
+
+    .alturaNav{ display: none; }
+    
+
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    /* Parte izquierda de la página, donde está el navegador de la página */
+    nav{ 
+        border: 1px solid #000000;
+        width: 25%; }
+    
+    /* Parte central de la página donde se encuentra todo el contenido */
+    section{ 
+        margin-left:10px;
+        width: 75%; }
+
+
+    /* Contenedor de la lista de estudiantes parte central*/
+    .contenerdorEstudiantes{ 
+        margin-left:10px;
+        width: 75%; }
+    
+    /* Parte derecha de la página donde se encuentra los mensajes del foro y notificaciones */
+    aside{ display: none !important; }
+    
+    h4{ font-size:15px; }
+    
+    h5{ font-size:12px; }
+
+    footer{
+        display:flex;
+        margin-left: 30px;
+        margin-right: 30px;
+        font-size:10px;
+    }  
+}
+
+
+@media (max-width:600px){
+
+    header{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #logo{
+        display:none;
+    }
+    
+    #paginaActual{
+        display:block;
+    }
+
+    #tituloPag{
+        display:none;
+    }
+
+    .dropdown{
+        display:block;
+    }
+
+
+    .titulotexto{margin-left: 0px; }
+
+    .texto{display:none;}
+
+    .alturaNav{ display: none; }
+
+    nav{display:none;}
+    
+    .flexVideos{
+        margin-left:0px;
+    }
+
+    section{
+        margin: 0px;
+        width: 100%;
+    }
+
+    .container{
+        /* Container incluye las tres partes centrales 
+         * de la página que son nav, section y aside 
+        */
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .contenerdorEstudiantes {
+        margin: 0px;    
+        padding: 0px;
+        width: 100%;
+    }
+
+    aside{ display: none;}
+
+    footer{
+        display:flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size:10px;
+    }  
+
+}
