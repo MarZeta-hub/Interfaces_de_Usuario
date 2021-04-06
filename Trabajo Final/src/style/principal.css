@@ -1,0 +1,37 @@
+.containerTopics {
+  display: flex;
+}
+
+.imagenAsignatura {
+  display: block;
+  height: 200px;
+  width: 300px;
+  border-bottom: 2px solid;
+}
+
+.nombreAsignatura {
+  display: block;
+  font-weight: bold;
+
+}
+
+.grupoyAsignatura {
+  display: block;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.Asignaturas {
+  display: block;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 4px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.Asignaturas:hover {
+  border-width: 6px;
+}

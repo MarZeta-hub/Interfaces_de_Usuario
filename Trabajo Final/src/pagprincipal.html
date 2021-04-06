@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<!-- INICIO HEAD -->
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="style/styleAllPages.css" />
+  <link rel="stylesheet" href="style/principal.css" />
+  <link rel="stylesheet" href="style/mini-event-calendar.css">
+  <script src="script/jquery-3.5.1.min.js"></script>
+  <script src="script/scritpAllPages.js"></script>
+  <script src="script/pagPrincipal.js"></script>
+  <script src="script/mini-event-calendar.js"></script>
+</head>
+<!-- FIN HEAD -->
+
+<body>
+  <header>
+    <img class="icon-imagen" src="images/logo.png" alt="logo" />
+    <h1>Aula Global</h1>
+    <div id="user" onclick="openForm()" style="cursor: pointer">
+      <img id="log" src="images/log.png" alt="logo" />
+      <div>
+        <p id="username">Invitado</p>
+        <p id="rol">Invitado</p>
+      </div>
+    </div>
+    <div id="clearfix">
+      <button onclick="cerrarSesion()" id="closeSessionbtn">
+        Cerrar Sesion
+      </button>
+      <button onclick="closeForm()" id="cancelbtn">Cancel</button>
+    </div>
+    <!--<div id="search">
+      <input id="searchBar" type="text" placeholder="Buscar..." name="searchBar" />
+      <input id="searchImg" type="image" src="images/search.png" alt="lupa" onclick="buscar()">
+    </div>-->
+  </header>
+
+
+  <div id="container">
+    <aside>
+        <div id="calendario"></div>
+    </aside>
+
+    <div class="main-container">
+      <h2>Asignaturas</h2>
+      <div class="containerTopics">
+        <div id="InterfacesU" class="Asignaturas" onclick="setInterfaces()">
+          <img class="imagenAsignatura" src="images/interface-usuario.png" alt="Foto">
+          <div class="grupoyAsignatura">
+            <a class="nombreAsignatura">Interfaces de Usuario</a>
+            <a class="grupo">Grupo 80</a>
+          </div>
+        </div>
+        <div id="IngenieriaS" class="Asignaturas" onclick="setingenieria()">
+          <img class="imagenAsignatura" src="images/interface-usuario.png" alt="Foto">
+          <div class="grupoyAsignatura">
+            <a class="nombreAsignatura">Ingenieria del Software</a>
+            <a class="grupo">Grupo 80</a>
+          </div>
+        </div>
+        <div id="arquitectura"  class="Asignaturas" onclick="setAC()">
+          <img class="imagenAsignatura" src="images/interface-usuario.png" alt="Foto">
+          <div class="grupoyAsignatura">
+            <a class="nombreAsignatura">Arquitectura de Computadores</a>
+            <a class="grupo">Grupo 80</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <a class="last-body-item" href="https://www.uc3m.es/Inicio" target="_blank">Web UC3M</a>
+    <p class="barra">|</p>
+    <a class="last-body-item" href="https://www.uc3m.es/inicio/informacion-legal/politica-privacidad"
+      target="_blank">Politica Privacidad</a>
+    <p class="barra">|</p>
+    <a class="last-body-item" href="https://www.uc3m.es/inicio/proteccion-datos" target="_blank">Copyright</a>
+  </div>
+</body>
+
+</html>

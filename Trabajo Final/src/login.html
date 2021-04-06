@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-es">
+<head>
+    <title>Login</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styleinicio.css">
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/calificaciones.js"></script>
+    <script src="script/login.js"></script>
+</head>
+
+<div class="contenedorinicio">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="elegir"></div>
+            <button type="button" class="toggle-btn" onclick="getIniciosesion()">Inicio Sesión</button>
+            <button type="button" class="toggle-btn" onclick="getRegistro()">Registrarse</button>
+        </div>
+        <div class="iconoUniversidad">
+            <img src="images/escudo_uc3m.png" alt="icono_aulaglobal">
+        </div>
+        <form id="iniciosesion" class="input-group" onsubmit="return iniciosesion()">
+            <h1>Bienvenido a UC3M</h1>
+            <input type="email" id="iemail" class="input-field" placeholder="Correo universidad" required>
+            <input type="password"  id="ipass" class="input-field" placeholder="Contraseña" required>
+            <button type="submit" class="submit-btn" id="acceso">Acceder</button> 
+        </form>
+        <form id="registro" class="input-group" onsubmit="return registro()">
+            <input type="text"  id="name" class="input-field" placeholder="Nombre y apellidos" required>
+            <input type="email" id="remail" class="input-field" placeholder="Correo universidad" required>
+            <input type="password" id="rpass" class="input-field" placeholder="Contraseña" required>
+            <div class="input-field">
+                <select name="rol" id="rol" required>
+                    <option value="">Seleccione Rol</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="estudiante">Estudiante</option>
+                </select>
+            </div>
+            <input type="checkbox" id="condiciones" class="check-box" required><span>Acepto los términos y Condiciones.</span>
+            <button type="submit" class="submit-btn">Registrarse</button> 
+        </form>
+    </div>
+</div>       
+
+</body>
+</html>
